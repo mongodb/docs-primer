@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'><title>Install MongoDB on Amazon Linux &mdash; MongoDB Primer 3.0.1</title><link rel="shortcut icon" href="//media.mongodb.org/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index" />
+  <meta name="release" content="3.0.1"/>
+  <meta name="DC.Source" content="https://github.com/mongodb/docs/blob/master/source/tutorial/install-mongodb-on-amazon.txt"/>
+    <link rel="canonical" href="http://docs.mongodb.org/primer/tutorial/install-mongodb-on-amazon" />
+  
+       <link rel="stylesheet" href="../../_static/bootstrap-custom.css" type="text/css" />
+       <link rel="stylesheet" href="../../_static/lib/icomoon.css" type="text/css" />
+       <link rel="stylesheet" href="../../_static/lib/font-awesome.css" type="text/css" />
+       <link rel="stylesheet" href="../../_static/lib/tipsy.css" type="text/css" />
+   <link rel="stylesheet" href="../../_static/mongodb-docs.css" type="text/css" />
+   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+     URL_ROOT:    '../../',
+     VERSION:     '3.0',
+     COLLAPSE_INDEX: false,
+     FILE_SUFFIX: '',
+     HAS_SOURCE:  false,
+    };
+  </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/lib/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="../../_static/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/navbar.js"></script>
+      <link rel="search" type="application/opensearchdescription+xml" href="http://docs.mongodb.org/osd.xml" title="MongoDB Help"/>
+<link rel="top" title="MongoDB Primer" href="../../" />
+<link rel="up" title="Install on Linux" href="../install-on-linux/" />
+<link rel="next" title="Install MongoDB on Ubuntu" href="../install-mongodb-on-ubuntu/" />
+<link rel="prev" title="Install MongoDB on SUSE" href="../install-mongodb-on-suse/" />
+      <script type="text/javascript">
+        (function() {
+           var cx = '017213726194841070573:WMX6838984';
+           var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+           gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+           gcse.onload = gcse.onreadystatechange = function() {
+            $(function() {
+              // hack to set a placeholder in google's custom search input
+              var pollInput = window.setInterval(function() {
+                var $input = $('.gsc-input input.gsc-input'),
+                    $div = $('.search-db');
+
+                if ($input.length) {
+                  $input.on('focus', function(e) { $div.addClass('wide').removeClass('narrow'); });
+                  $input.on('blur', function(e) {
+                    if (!$input.val().length) { $div.addClass('narrow').removeClass('wide'); }
+                  });
+                  $input.attr('placeholder', "Search mongodb.org");
+                  window.clearInterval(pollInput);
+                }
+              }, 10);
+            });
+           };
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+           })();
+      </script></head>
+<body>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-JQHP"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+     {'gtm.start': new Date().getTime(),event:'gtm.js'}
+   );var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-JQHP');</script>
+  <!-- End Google Tag Manager -->
+    <header id="header-db" class="row" role="navigation">
+      <div class="header-content">
+        <a class="fa fa-bars expand-toc-icon pull-left" href="#"></a>
+           <div class="logo pull-left">
+             <a href="http://www.mongodb.org/">
+               <img src="//media.mongodb.org/logo-mongodb-header.png", alt="MongoDB.org" />
+             </a>
+           </div>
+        
+        <div>
+          <div class="search-db narrow pull-right"><gcse:searchbox-only resultsUrl="http://docs.mongodb.org/manual/search/" queryParameterName="query"></gcse:searchbox-only></div>
+          
+          <div class="nav-items pull-right">
+            
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <aside class="sidebar">
+       
+  <div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper" style="display: none;"><h3>
+  <a href="../../">MongoDB Primer</a>
+</h3>
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction to MongoDB</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../installation/">Install MongoDB</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../install-on-linux/">Install on Linux</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../install-mongodb-on-red-hat/">Install on Red Hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install-mongodb-on-suse/">Install on SUSE</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Install on Amazon Linux</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../install-mongodb-on-ubuntu/">Install on Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install-mongodb-on-debian/">Install on Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../install-mongodb-on-linux/">Install on Other Linux Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../install-mongodb-on-os-x/">Install on OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install-mongodb-on-windows/">Install on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../import-data/">Import Example Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../client/">MongoDB Shell (mongo)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../insert/">Insert Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../query/">Find or Query Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/">Update Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../remove/">Remove Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aggregation/">Data Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexes/">Indexes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/">Drivers</a></li>
+</ul>
+
+
+<div class="nav-footer">
+  <a href="../../">Home</a> |
+  <a href="../../genindex/">Index</a>
+</div>
+    </div>
+  </div>
+    
+  </aside>
+  <div class="option-popup closed">
+    <div class="option-header">
+      <i class="fa fa-gear"></i>
+      <span>OPTIONS</span>
+      <i class="fa fa-angle-up pull-right"></i>
+    </div>
+    <div class="option-body">
+      <ul>
+        
+          <!-- version selector -->
+          <li>
+            <label>Version</label>
+            <div class="btn-group btn-group-xs pull-right">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Select Version <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                
+                  
+                  <li class="active">
+                  
+                    <a href="#" data-path="primer">3.0 (current)</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.6</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.4</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.2</a>
+                  </li>
+                
+              </ul>
+            </div>
+          </li>
+        
+           
+        
+           <!-- format selector -->
+           <li>
+             <label>Formats</label>
+             <ul class="formats-list">
+                   <li><a href="../../single" target="_blank">HTML</span></a></li><li><a href="http://docs.mongodb.org/primer/master/MongoDB-primer.pdf" target="_blank" rel="nofollow">PDF</a></li><li><a href="http://docs.mongodb.org/primer/master/MongoDB-primer.epub" target="_blank" rel="nofollow">EPUB</a></li>
+             </ul>
+           </li>
+        
+        <!-- contribute -->
+        <li>
+          <label>Contribute</label>
+          <ul class="contribute-list">
+            <li><a class="jira-link jirafeedback" href="https://jira.mongodb.org/secure/CreateIssueDetails!init.jspa?pid=10380&issuetype=4&priority=4&summary=Comment+on%3a+%22tutorial/install-mongodb-on-amazon%2Etxt%22" target="_blank" title="Report a problem with tutorial/install-mongodb-on-amazon.txt on Jira">Report a Problem</a></li>
+               <li><a class="edit-link" href="https://github.com/mongodb/docs/blob/master/source/tutorial/install-mongodb-on-amazon.txt" target="_blank" title="Edit tutorial/install-mongodb-on-amazon.txt on GitHub">
+    
+      <span>Edit on Github</span>
+    
+  </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="main-column pull-left">
+
+      
+        <div class="document">
+            <div class="documentwrapper"><div class="bodywrapper">
+              <div class="body">
+                   <a class="edit-link" href="https://github.com/mongodb/docs/blob/master/source/tutorial/install-mongodb-on-amazon.txt" target="_blank" title="Edit tutorial/install-mongodb-on-amazon.txt on GitHub">
+    
+      <span class="icon-edit"></span>
+    
+  </a>
+                
+                
+   <div class="bc">
+     
+       <ul>
+          <li><a href="../../installation/">Install MongoDB</a><span class="bcpoint"> > </span></li>
+          
+          <li><a href="../install-on-linux/">Install on Linux</a><span class="bcpoint"> > </span></li>
+          <li>Install MongoDB on Amazon Linux</li> 
+      </ul>
+    
+  </div>
+                
+                  <div class="section" id="install-mongodb-on-amazon-linux">
+<h1>Install MongoDB on Amazon Linux<a class="headerlink" href="#install-mongodb-on-amazon-linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Use this tutorial to install MongoDB on Amazon Linux from <tt class="docutils literal"><span class="pre">.rpm</span></tt>
+packages.</p>
+</div>
+<div class="section" id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<p>MongoDB provides packages of the officially supported MongoDB builds in
+its own repository. This repository provides the MongoDB distribution
+in the following packages:</p>
+<ul>
+<li><p class="first"><tt class="docutils literal"><span class="pre">mongodb-org</span></tt></p>
+<p>This package is a <tt class="docutils literal"><span class="pre">metapackage</span></tt> that will automatically install
+the four component packages listed below.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">mongodb-org-server</span></tt></p>
+<p>This package contains the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongod</span></tt></a> daemon and associated
+configuration and init scripts.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">mongodb-org-mongos</span></tt></p>
+<p>This package contains the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongos/#bin.mongos" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongos</span></tt></a> daemon.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">mongodb-org-shell</span></tt></p>
+<p>This package contains the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongo/#bin.mongo" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongo</span></tt></a> shell.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">mongodb-org-tools</span></tt></p>
+<p>This package contains the following MongoDB tools: <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongoimport/#bin.mongoimport" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongoimport</span></tt></a>
+<a class="reference external" href="http://docs.mongodb.org/manual/reference/program/bsondump/#bin.bsondump" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">bsondump</span></tt></a>, <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongodump/#bin.mongodump" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongodump</span></tt></a>, <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongoexport/#bin.mongoexport" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongoexport</span></tt></a>,
+<a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongofiles/#bin.mongofiles" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongofiles</span></tt></a>, <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongooplog/#bin.mongooplog" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongooplog</span></tt></a>,
+<a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongoperf/#bin.mongoperf" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongoperf</span></tt></a>, <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongorestore/#bin.mongorestore" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongorestore</span></tt></a>, <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongostat/#bin.mongostat" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongostat</span></tt></a>,
+and <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongotop/#bin.mongotop" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongotop</span></tt></a>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="control-scripts">
+<h2>Control Scripts<a class="headerlink" href="#control-scripts" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">mongodb-org</span></tt> package includes various <a class="reference external" href="http://docs.mongodb.org/manual/reference/glossary/#term-control-script" title="(in mongodb-manual v3.0)"><em class="xref std std-term">control scripts</em></a>, including the init script <tt class="docutils literal"><span class="pre">/etc/rc.d/init.d/mongod</span></tt>. These scripts
+are used to stop, start, and restart daemon processes.</p>
+<p>The package configures MongoDB using the <tt class="docutils literal"><span class="pre">/etc/mongod.conf</span></tt> file in
+conjunction with the control scripts. See
+the <a class="reference external" href="http://docs.mongodb.org/manual/reference/configuration-options">Configuration File</a>
+reference for documentation of settings available in the configuration file.</p>
+<p>As of version 3.0.1, there are no control scripts for
+<a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongos/#bin.mongos" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongos</span></tt></a>. The <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongos/#bin.mongos" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongos</span></tt></a> process is used only in
+<a class="reference external" href="http://docs.mongodb.org/manual/core/sharding">sharding</a>. You can use the <tt class="docutils literal"><span class="pre">mongod</span></tt> init script
+to derive your own <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongos/#bin.mongos" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongos</span></tt></a> control script for use in such
+environments. See the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongos/#bin.mongos" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongos</span></tt></a> reference for configuration details.</p>
+</div>
+<div class="section" id="considerations">
+<h2>Considerations<a class="headerlink" href="#considerations" title="Permalink to this headline">¶</a></h2>
+<p>For production deployments, always run MongoDB on 64-bit systems.</p>
+<p>The default <tt class="docutils literal"><span class="pre">/etc/mongod.conf</span></tt> configuration file supplied by the
+3.0 series packages has <tt class="xref mongodb mongodb-setting docutils literal"><span class="pre">bind_ip</span></tt> set to
+<tt class="docutils literal"><span class="pre">127.0.0.1</span></tt> by default. Modify this setting as needed for your
+environment before initializing a <a class="reference external" href="http://docs.mongodb.org/manual/reference/glossary/#term-replica-set" title="(in mongodb-manual v3.0)"><em class="xref std std-term">replica set</em></a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.6: </span>The package structure and names have changed as of version 2.6. For
+instructions on installation of an older release, please refer to the
+documentation for the appropriate version.</p>
+</div>
+</div>
+<div class="section" id="install-mongodb">
+<h2>Install MongoDB<a class="headerlink" href="#install-mongodb" title="Permalink to this headline">¶</a></h2>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">1</div></div><div class="section" id="configure-the-package-management-system-yum">
+<h3>Configure the package management system (<tt class="docutils literal"><span class="pre">yum</span></tt>).<a class="headerlink" href="#configure-the-package-management-system-yum" title="Permalink to this headline">¶</a></h3>
+<p>Create a <tt class="docutils literal"><span class="pre">/etc/yum.repos.d/mongodb-org-3.0.repo</span></tt> file so that
+you can install MongoDB directly, using <tt class="docutils literal"><span class="pre">yum</span></tt>.</p>
+<p>Use the following repository file to specify the <em>latest</em>
+stable release of MongoDB.</p>
+<div class="highlight-cfg"><div class="highlight"><pre><span class="k">[mongodb-org-3.0]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">MongoDB Repository</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">http://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.0/x86_64/</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+</pre></div>
+</div>
+<p>Use the following repository to install <em>only</em> versions of
+MongoDB for the <tt class="docutils literal"><span class="pre">3.0</span></tt> release.  If you&#8217;d like to install
+MongoDB packages from a particular <a class="reference external" href="http://docs.mongodb.org/manual/release-notes/#release-version-numbers" title="(in mongodb-manual v3.0)"><em class="xref std std-ref">release
+series</em></a>, such as 2.4 or 2.6, you can
+specify the release series in the repository configuration. For
+example, to restrict your system to the 2.6 release series,
+create a <tt class="docutils literal"><span class="pre">/etc/yum.repos.d/mongodb-org-2.6.repo</span></tt> file
+to hold the following configuration information for the MongoDB
+2.6 repository:</p>
+<div class="highlight-cfg"><div class="highlight"><pre><span class="k">[mongodb-org-2.6]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">MongoDB 2.6 Repository</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">.repo</span></tt> files for each release can also be found <a class="reference external" href="https://repo.mongodb.org/yum/{{distro_name}}/">in the repository itself</a>.
+Remember that odd-numbered minor release versions (e.g. 2.5) are development versions and are unsuitable
+for production use.</p>
+</div></div>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">2</div></div><div class="section" id="install-the-mongodb-packages-and-associated-tools">
+<h3>Install the MongoDB packages and associated tools.<a class="headerlink" href="#install-the-mongodb-packages-and-associated-tools" title="Permalink to this headline">¶</a></h3>
+<p>When you install the packages, you choose whether to install the current
+release or a previous one. This step provides the commands for both.</p>
+<p>To install the latest stable version of MongoDB, issue the following
+command:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo yum install -y mongodb-org
+</pre></div>
+</div>
+<p>To install a specific release of MongoDB, specify each
+component package individually and append the version number to the
+package name, as in the following example:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo yum install -y mongodb-org-3.0.1 mongodb-org-server-3.0.1 mongodb-org-shell-3.0.1 mongodb-org-mongos-3.0.1 mongodb-org-tools-3.0.1
+</pre></div>
+</div>
+<p>You can specify any available version of MongoDB. However <tt class="docutils literal"><span class="pre">yum</span></tt>
+will upgrade the packages when a newer version becomes available. To
+prevent unintended upgrades, pin the package. To pin a package, add
+the following <tt class="docutils literal"><span class="pre">exclude</span></tt> directive to your <tt class="docutils literal"><span class="pre">/etc/yum.conf</span></tt> file:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">exclude</span><span class="o">=</span><span class="s">mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools</span>
+</pre></div>
+</div>
+<p>Versions of the MongoDB packages before 2.6 use a different repo
+location. Refer to the version of the documentation appropriate for
+your MongoDB version.</p>
+</div></div>
+</div>
+<div class="section" id="run-mongodb">
+<h2>Run MongoDB<a class="headerlink" href="#run-mongodb" title="Permalink to this headline">¶</a></h2>
+<p>The MongoDB instance stores its data files in <tt class="docutils literal"><span class="pre">/var/lib/mongo</span></tt>
+and its log files in <tt class="docutils literal"><span class="pre">/var/log/mongodb</span></tt> by default,
+and runs using the <tt class="docutils literal"><span class="pre">mongod</span></tt>
+user account. You can specify alternate log and data file
+directories in <tt class="docutils literal"><span class="pre">/etc/mongod.conf</span></tt>. See <a class="reference external" href="http://docs.mongodb.org/manual/reference/configuration-options/#systemLog.path" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-setting docutils literal"><span class="pre">systemLog.path</span></tt></a>
+and <a class="reference external" href="http://docs.mongodb.org/manual/reference/configuration-options/#storage.dbPath" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-setting docutils literal"><span class="pre">storage.dbPath</span></tt></a> for additional information.</p>
+<p>If you change the user that runs the MongoDB process, you
+<strong>must</strong> modify the access control rights to the <tt class="docutils literal"><span class="pre">/var/lib/mongo</span></tt> and
+<tt class="docutils literal"><span class="pre">/var/log/mongodb</span></tt> directories to give this user access to these
+directories.</p>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">1</div></div><div class="section" id="start-mongodb">
+<h3>Start MongoDB.<a class="headerlink" href="#start-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>You can start the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongod</span></tt></a> process by issuing the following
+command:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo service mongod start
+</pre></div>
+</div>
+</div></div>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">2</div></div><div class="section" id="verify-that-mongodb-has-started-successfully">
+<h3>Verify that MongoDB has started successfully<a class="headerlink" href="#verify-that-mongodb-has-started-successfully" title="Permalink to this headline">¶</a></h3>
+<p>You can verify that the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongod</span></tt></a> process has started
+successfully by checking the contents of the log file at
+<tt class="docutils literal"><span class="pre">/var/log/mongodb/mongod.log</span></tt>
+for a line reading</p>
+<div class="highlight-none"><div class="highlight"><pre>[initandlisten] waiting for connections on port &lt;port&gt;
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">&lt;port&gt;</span></tt> is the port configured in <tt class="docutils literal"><span class="pre">/etc/mongod.conf</span></tt>, <tt class="docutils literal"><span class="pre">27017</span></tt> by default.</p>
+<p>You can optionally ensure that MongoDB will start following a system
+reboot by issuing the following command:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo chkconfig mongod on
+</pre></div>
+</div>
+</div></div>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">3</div></div><div class="section" id="stop-mongodb">
+<h3>Stop MongoDB.<a class="headerlink" href="#stop-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>As needed, you can stop the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongod</span></tt></a> process by issuing the
+following command:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo service mongod stop
+</pre></div>
+</div>
+</div></div>
+<div class="sequence-block"><div class="bullet-block"><div class="sequence-step">4</div></div><div class="section" id="restart-mongodb">
+<h3>Restart MongoDB.<a class="headerlink" href="#restart-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>You can restart the <a class="reference external" href="http://docs.mongodb.org/manual/reference/program/mongod/#bin.mongod" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-program docutils literal"><span class="pre">mongod</span></tt></a> process by issuing the following
+command:</p>
+<div class="highlight-sh"><div class="highlight"><pre>sudo service mongod restart
+</pre></div>
+</div>
+<p>You can follow the state of the process for errors or important messages
+by watching the output in the <tt class="docutils literal"><span class="pre">/var/log/mongodb/mongod.log</span></tt> file.</p>
+</div></div>
+</div>
+</div>
+
+                
+    <div id="btnv">
+      <span class="btn-arrow-left">&larr; &nbsp;</span>
+      <a class="btn-prev-text" href="../install-mongodb-on-suse/" title="Previous Section: Install MongoDB on SUSE"><span>Install MongoDB on SUSE</span></a>
+      <a class="btn-next-text" href="../install-mongodb-on-ubuntu/" title="Next Section: Install MongoDB on Ubuntu"><span>Install MongoDB on Ubuntu</span></a>
+      <span class="btn-arrow-right">&nbsp;&rarr;</span>
+    </div>
+                  <div class="footer">
+                    <div class="copyright">
+                      <p>Copyright &copy; 2011-2015 <a class="smalltext" href="http://www.mongodb.com">MongoDB, Inc</a>. Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/ ">Creative Commons</a>. MongoDB, Mongo, and the leaf logo are registered trademarks of MongoDB, Inc.</p>
+                    </div>
+                  </div>
+              </div></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+      <div class="wrapper">
+             <div class="toc">
+               <span class="toc-header">ON THIS PAGE</span>
+               <ul>
+<li><a class="reference internal" href="#">Install MongoDB on Amazon Linux</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#packages">Packages</a></li>
+<li><a class="reference internal" href="#control-scripts">Control Scripts</a></li>
+<li><a class="reference internal" href="#considerations">Considerations</a></li>
+<li><a class="reference internal" href="#install-mongodb">Install MongoDB</a><ul>
+<li><a class="reference internal" href="#configure-the-package-management-system-yum">Configure the package management system (<tt class="docutils literal"><span class="pre">yum</span></tt>).</a></li>
+<li><a class="reference internal" href="#install-the-mongodb-packages-and-associated-tools">Install the MongoDB packages and associated tools.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-mongodb">Run MongoDB</a><ul>
+<li><a class="reference internal" href="#start-mongodb">Start MongoDB.</a></li>
+<li><a class="reference internal" href="#verify-that-mongodb-has-started-successfully">Verify that MongoDB has started successfully</a></li>
+<li><a class="reference internal" href="#stop-mongodb">Stop MongoDB.</a></li>
+<li><a class="reference internal" href="#restart-mongodb">Restart MongoDB.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+             </div>
+          <div class="report-link">
+            <a class="jira-link jirafeedback" href="https://jira.mongodb.org/secure/CreateIssueDetails!init.jspa?pid=10380&issuetype=4&priority=4&summary=Comment+on%3a+%22tutorial/install-mongodb-on-amazon%2Etxt%22" target="_blank" title="Report a problem with tutorial/install-mongodb-on-amazon.txt on Jira">Report a Problem</a>
+          </div>
+        
+           <div class="social">
+             <a class="twitter-icon" href="https://twitter.com/mongodbinc"><i class="fa fa-twitter-square"></i></a>
+             <a class="youtube-icon" href="http://www.youtube.com/user/MongoDB"><i class="fa fa-youtube-square"></i></a>
+             <a class="facebook-icon" href="https://www.facebook.com/mongodb"><i class="fa fa-facebook-square"></i></a>
+             <a class="gplus-icon" href="https://plus.google.com/u/1/101024085748034940765/posts?cfem=1"><i class="fa fa-google-plus-square"></i></a>
+           </div>
+        
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <script type="text/javascript">
+document.write(unescape("%3Cscript src='" + document.location.protocol + "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>try { mktoMunchkin("017-HGS-593"); } catch(e) {}</script><script type="text/javascript">
+jQuery.ajax({
+         url: "https://jira.mongodb.org/s/en_UScn8g8x/782/6/1.2.5/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?collectorId=298ba4e7",
+         type: "get",
+         cache: true,
+         dataType: "script"
+        });
+window.ATL_JQ_PAGE_PROPS =  {
+        "triggerFunction": function(showCollectorDialog) {
+                jQuery(".jirafeedback").click(function(e) {e.preventDefault();showCollectorDialog();});},
+                fieldValues: {component: 'primer', summary: 'Comment on: "primer/tutorial/install-mongodb-on-amazon.txt"'},
+                environment: {'repo': 'docs','source': 'tutorial/install-mongodb-on-amazon'}
+                };
+</script>
+  <script type="text/javascript">
+  var pagename = 'tutorial/install-mongodb-on-amazon';
+  if (pagename == 'index') {
+    pagename = '';
+  }
+  window.basePath = '';
+
+  window.fullDocsPath = function(base) {
+    var path = pagename;
+
+    // skip if pagename is undefined (index.html)
+    if (path) {
+      path = pagename + '/';
+    }
+    return '/' + base + '/' + path;
+  }
+  // Bootstrap array of links that should trigger a full page reload
+  window.docsExcludedNav = [];
+
+  $(document).ready(function(){
+    $(".version-selector").on('click', function(e) {
+      e.preventDefault();
+      var base = $(e.currentTarget).data('path');
+      window.location.href = fullDocsPath(base);
+    });
+
+    $("select.language-selector").on('change', function(e) {
+      var path = $(e.currentTarget).find('option:selected').data('path');
+      window.location.href = path;
+    });
+  });
+
+  </script></body>
+</html>

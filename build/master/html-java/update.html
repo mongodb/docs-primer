@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'><title>Update Data with Java Driver &mdash; MongoDB Primer 3.0.1</title><link rel="shortcut icon" href="//media.mongodb.org/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index" />
+  <meta name="release" content="3.0.1"/>
+  <meta name="DC.Source" content="https://github.com/mongodb/docs/blob/master/source/update.txt"/>
+    <link rel="canonical" href="http://docs.mongodb.org/primer/update" />
+  
+       <link rel="stylesheet" href="_static/bootstrap-custom.css" type="text/css" />
+       <link rel="stylesheet" href="_static/lib/icomoon.css" type="text/css" />
+       <link rel="stylesheet" href="_static/lib/font-awesome.css" type="text/css" />
+       <link rel="stylesheet" href="_static/lib/tipsy.css" type="text/css" />
+   <link rel="stylesheet" href="_static/mongodb-docs.css" type="text/css" />
+   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+     URL_ROOT:    './',
+     VERSION:     '3.0',
+     COLLAPSE_INDEX: false,
+     FILE_SUFFIX: '.html',
+     HAS_SOURCE:  false,
+    };
+  </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="_static/navbar.js"></script>
+      <link rel="search" type="application/opensearchdescription+xml" href="http://docs.mongodb.org/osd.xml" title="MongoDB Help"/>
+<link rel="top" title="MongoDB Primer" href="index.html" />
+<link rel="next" title="Remove Data with Java Driver" href="remove.html" />
+<link rel="prev" title="Find or Query Data with Java Driver" href="query.html" />
+      <script type="text/javascript">
+        (function() {
+           var cx = '017213726194841070573:WMX6838984';
+           var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+           gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+           gcse.onload = gcse.onreadystatechange = function() {
+            $(function() {
+              // hack to set a placeholder in google's custom search input
+              var pollInput = window.setInterval(function() {
+                var $input = $('.gsc-input input.gsc-input'),
+                    $div = $('.search-db');
+
+                if ($input.length) {
+                  $input.on('focus', function(e) { $div.addClass('wide').removeClass('narrow'); });
+                  $input.on('blur', function(e) {
+                    if (!$input.val().length) { $div.addClass('narrow').removeClass('wide'); }
+                  });
+                  $input.attr('placeholder', "Search mongodb.org");
+                  window.clearInterval(pollInput);
+                }
+              }, 10);
+            });
+           };
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+           })();
+      </script></head>
+<body>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-JQHP"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+     {'gtm.start': new Date().getTime(),event:'gtm.js'}
+   );var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-JQHP');</script>
+  <!-- End Google Tag Manager -->
+    <header id="header-db" class="row" role="navigation">
+      <div class="header-content">
+        <a class="fa fa-bars expand-toc-icon pull-left" href="#"></a>
+           <div class="logo pull-left">
+             <a href="http://www.mongodb.org/">
+               <img src="//media.mongodb.org/logo-mongodb-header.png", alt="MongoDB.org" />
+             </a>
+           </div>
+        
+        <div>
+          <div class="search-db narrow pull-right"><gcse:searchbox-only resultsUrl="http://docs.mongodb.org/manual/search/" queryParameterName="query"></gcse:searchbox-only></div>
+          
+          <div class="nav-items pull-right">
+            
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <aside class="sidebar">
+       
+  <div class="sphinxsidebar">
+    <div class="sphinxsidebarwrapper" style="display: none;"><h3>
+  <a href="index.html">MongoDB Primer</a>
+</h3>
+
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-data.html">Import Example Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Java Driver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="insert.html">Insert Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">Find or Query Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Update Data</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remove.html">Remove Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Data Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexes.html">Indexes</a></li>
+</ul>
+
+
+<div class="nav-footer">
+  <a href="index.html">Home</a> |
+  <a href="genindex.html">Index</a>
+</div>
+    </div>
+  </div>
+    
+  </aside>
+  <div class="option-popup closed">
+    <div class="option-header">
+      <i class="fa fa-gear"></i>
+      <span>OPTIONS</span>
+      <i class="fa fa-angle-up pull-right"></i>
+    </div>
+    <div class="option-body">
+      <ul>
+        
+          <!-- version selector -->
+          <li>
+            <label>Version</label>
+            <div class="btn-group btn-group-xs pull-right">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Select Version <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                
+                  
+                  <li class="active">
+                  
+                    <a href="#" data-path="primer">3.0 (current)</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.6</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.4</a>
+                  </li>
+                
+                  
+                  <li>
+                  
+                    <a class="version-selector" href="#" data-path="primer">2.2</a>
+                  </li>
+                
+              </ul>
+            </div>
+          </li>
+        
+           
+        
+           <!-- format selector -->
+           <li>
+             <label>Formats</label>
+             <ul class="formats-list">
+                   <li><a href="single" target="_blank">HTML</span></a></li><li><a href="http://docs.mongodb.org/primer/master/MongoDB-primer.pdf" target="_blank" rel="nofollow">PDF</a></li><li><a href="http://docs.mongodb.org/primer/master/MongoDB-primer.epub" target="_blank" rel="nofollow">EPUB</a></li>
+             </ul>
+           </li>
+        
+        <!-- contribute -->
+        <li>
+          <label>Contribute</label>
+          <ul class="contribute-list">
+            <li><a class="jira-link jirafeedback" href="https://jira.mongodb.org/secure/CreateIssueDetails!init.jspa?pid=10380&issuetype=4&priority=4&summary=Comment+on%3a+%22update%2Etxt%22" target="_blank" title="Report a problem with update.txt on Jira">Report a Problem</a></li>
+               <li><a class="edit-link" href="https://github.com/mongodb/docs/blob/master/source/update.txt" target="_blank" title="Edit update.txt on GitHub">
+    
+      <span>Edit on Github</span>
+    
+  </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="main-column pull-left">
+
+      
+        <div class="document">
+            <div class="documentwrapper"><div class="bodywrapper">
+              <div class="body">
+                   <a class="edit-link" href="https://github.com/mongodb/docs/blob/master/source/update.txt" target="_blank" title="Edit update.txt on GitHub">
+    
+      <span class="icon-edit"></span>
+    
+  </a>
+                
+                
+   <div class="bc">
+     
+      
+    
+  </div>
+                
+                  <div class="section" id="update-data-with-java-driver">
+<h1>Update Data with Java Driver<a class="headerlink" href="#update-data-with-java-driver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#updateOne-org.bson.conversions.Bson-org.bson.conversions.Bson-">updateOne</a> method, <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#updateMany-org.bson.conversions.Bson-org.bson.conversions.Bson-">updateMany</a> method, and <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#replaceOne-org.bson.conversions.Bson-TDocument-">replaceOne</a> method to update documents of a
+collection. The methods accept the following parameters:</p>
+<ul class="simple">
+<li>a filter document to match the documents to update,</li>
+<li>an update document to specify the modification to perform, and</li>
+<li>an options parameter (optional).</li>
+</ul>
+<p>To specify the filter, use the same structure and syntax as
+the query conditions. See <a class="reference internal" href="query.html"><em>Find or Query Data with Java Driver</em></a> for an introduction to query
+conditions.</p>
+<p>You cannot update the <tt class="docutils literal"><span class="pre">_id</span></tt> field.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>The examples in this section use the <tt class="docutils literal"><span class="pre">restaurants</span></tt> collection in the
+<tt class="docutils literal"><span class="pre">test</span></tt> database. For instructions on populating the collection with
+the sample dataset, see <a class="reference internal" href="import-data.html"><em>Import Example Dataset</em></a>.</p>
+<p>Follow the <a class="reference internal" href="client.html#java-download-connect"><em>Connect to MongoDB</em></a> step to
+connect to a running MongoDB instance and declare and define the
+variable <tt class="docutils literal"><span class="pre">db</span></tt> to access the <tt class="docutils literal"><span class="pre">test</span></tt> database.</p>
+<p>Include the following <tt class="docutils literal"><span class="pre">import</span></tt> statements.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">org.bson.Document</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-specific-fields">
+<h2>Update Specific Fields<a class="headerlink" href="#update-specific-fields" title="Permalink to this headline">¶</a></h2>
+<p>To change a field value, MongoDB provides <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update">update operators</a>, such as <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update/set/#up._S_set" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-update docutils literal"><span class="pre">$set</span></tt></a> to modify
+values. Some update operators, such as <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update/set/#up._S_set" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-update docutils literal"><span class="pre">$set</span></tt></a>, will create
+the field if the field does not exist. See the individual
+<a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update">update operators</a> reference.</p>
+<div class="section" id="update-top-level-fields">
+<h3>Update Top-Level Fields<a class="headerlink" href="#update-top-level-fields" title="Permalink to this headline">¶</a></h3>
+<p>The following operation updates the first document with <tt class="docutils literal"><span class="pre">name</span></tt> equal
+to <tt class="docutils literal"><span class="pre">&quot;Juni&quot;</span></tt>, using the <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update/set/#up._S_set" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-update docutils literal"><span class="pre">$set</span></tt></a> operator to update the
+<tt class="docutils literal"><span class="pre">cuisine</span></tt> field and the <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update/currentDate/#up._S_currentDate" title="(in mongodb-manual v3.0)"><tt class="xref mongodb mongodb-update docutils literal"><span class="pre">$currentDate</span></tt></a> operator to update the
+<tt class="docutils literal"><span class="pre">lastModified</span></tt> field with the current date.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="na">getCollection</span><span class="o">(</span><span class="s">&quot;restaurants&quot;</span><span class="o">).</span><span class="na">updateOne</span><span class="o">(</span><span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">,</span> <span class="s">&quot;Juni&quot;</span><span class="o">),</span>
+        <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;$set&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;cuisine&quot;</span><span class="o">,</span> <span class="s">&quot;American (New)&quot;</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;$currentDate&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;lastModified&quot;</span><span class="o">,</span> <span class="kc">true</span><span class="o">)));</span>
+</pre></div>
+</div>
+<p>The updateOne operation returns a <tt class="docutils literal"><span class="pre">UpdateResult</span></tt> which contains information about the operation.
+The <tt class="docutils literal"><span class="pre">getModifiedCount</span></tt> method returns the number of documents modified.</p>
+</div>
+<div class="section" id="update-an-embedded-field">
+<h3>Update an Embedded Field<a class="headerlink" href="#update-an-embedded-field" title="Permalink to this headline">¶</a></h3>
+<p>To update a field within an embedded document, use the <a class="reference external" href="http://docs.mongodb.org/manual/reference/glossary/#term-dot-notation" title="(in mongodb-manual v3.0)"><em class="xref std std-term">dot
+notation</em></a>. When using the dot notation, enclose the whole dotted field
+name in quotes.  The following updates the <tt class="docutils literal"><span class="pre">street</span></tt> field in the
+embedded <tt class="docutils literal"><span class="pre">address</span></tt> document.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="na">getCollection</span><span class="o">(</span><span class="s">&quot;restaurants&quot;</span><span class="o">).</span><span class="na">updateOne</span><span class="o">(</span><span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;restaurant_id&quot;</span><span class="o">,</span> <span class="s">&quot;41156888&quot;</span><span class="o">),</span>
+        <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;$set&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;address.street&quot;</span><span class="o">,</span> <span class="s">&quot;East 31st Street&quot;</span><span class="o">)));</span>
+</pre></div>
+</div>
+<p>The updateOne operation returns a <tt class="docutils literal"><span class="pre">UpdateResult</span></tt> which contains information about the operation.
+The <tt class="docutils literal"><span class="pre">getModifiedCount</span></tt> method returns the number of documents modified.</p>
+</div>
+<div class="section" id="update-multiple-documents">
+<h3>Update Multiple Documents<a class="headerlink" href="#update-multiple-documents" title="Permalink to this headline">¶</a></h3>
+<p>To update multiple documents, use the <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#updateMany-org.bson.conversions.Bson-org.bson.conversions.Bson-">updateMany</a> method.  The following
+operation updates <em>all</em> documents that have <tt class="docutils literal"><span class="pre">address.zipcode</span></tt> field
+equal to <tt class="docutils literal"><span class="pre">&quot;10016&quot;</span></tt>, setting the <tt class="docutils literal"><span class="pre">borough</span></tt> field to <tt class="docutils literal"><span class="pre">&quot;Manhattan&quot;</span></tt>
+and the <tt class="docutils literal"><span class="pre">lastModified</span></tt> field to the current date.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="na">getCollection</span><span class="o">(</span><span class="s">&quot;restaurants&quot;</span><span class="o">).</span><span class="na">updateMany</span><span class="o">(</span><span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;address.zipcode&quot;</span><span class="o">,</span> <span class="s">&quot;10016&quot;</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;cuisine&quot;</span><span class="o">,</span> <span class="s">&quot;Other&quot;</span><span class="o">),</span>
+        <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;$set&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;cuisine&quot;</span><span class="o">,</span> <span class="s">&quot;Category To Be Determined&quot;</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;$currentDate&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;lastModified&quot;</span><span class="o">,</span> <span class="kc">true</span><span class="o">)));</span>
+</pre></div>
+</div>
+<p>The updateMany operation returns a <tt class="docutils literal"><span class="pre">UpdateResult</span></tt> which contains information about the operation.
+The <tt class="docutils literal"><span class="pre">getModifiedCount</span></tt> method returns the number of documents modified.</p>
+</div>
+</div>
+<div class="section" id="replace-a-document">
+<h2>Replace a Document<a class="headerlink" href="#replace-a-document" title="Permalink to this headline">¶</a></h2>
+<p>To replace the <strong>entire</strong> document except for the <tt class="docutils literal"><span class="pre">_id</span></tt> field, pass
+an entirely new document as the second argument to the
+<a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#replaceOne-org.bson.conversions.Bson-TDocument-">replaceOne</a> method. The replacement document can have
+different fields from the original document. In the replacement
+document, you can omit the <tt class="docutils literal"><span class="pre">_id</span></tt> field since the <tt class="docutils literal"><span class="pre">_id</span></tt> field is
+immutable. If you do include the <tt class="docutils literal"><span class="pre">_id</span></tt> field, it must be the same
+value as the existing value.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">After the update, the document <strong>only</strong> contains the field or
+fields in the replacement document.</p>
+</div>
+<p>After the following update, the modified document will <strong>only</strong> contain
+the <tt class="docutils literal"><span class="pre">_id</span></tt> field, <tt class="docutils literal"><span class="pre">name</span></tt> field, the <tt class="docutils literal"><span class="pre">address</span></tt> field. i.e. the
+document will <em>not</em> contain the <tt class="docutils literal"><span class="pre">restaurant_id</span></tt>, <tt class="docutils literal"><span class="pre">cuisine</span></tt>,
+<tt class="docutils literal"><span class="pre">grades</span></tt>, and the <tt class="docutils literal"><span class="pre">borough</span></tt> fields.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="na">getCollection</span><span class="o">(</span><span class="s">&quot;restaurants&quot;</span><span class="o">).</span><span class="na">replaceOne</span><span class="o">(</span><span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;restaurant_id&quot;</span><span class="o">,</span> <span class="s">&quot;41704620&quot;</span><span class="o">),</span>
+        <span class="k">new</span> <span class="n">Document</span><span class="o">(</span><span class="s">&quot;address&quot;</span><span class="o">,</span>
+                <span class="k">new</span> <span class="n">Document</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;street&quot;</span><span class="o">,</span> <span class="s">&quot;2 Avenue&quot;</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;zipcode&quot;</span><span class="o">,</span> <span class="s">&quot;10075&quot;</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;building&quot;</span><span class="o">,</span> <span class="s">&quot;1480&quot;</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;coord&quot;</span><span class="o">,</span> <span class="n">asList</span><span class="o">(-</span><span class="mf">73.9557413</span><span class="o">,</span> <span class="mf">40.7720266</span><span class="o">)))</span>
+                <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">,</span> <span class="s">&quot;Vella 2&quot;</span><span class="o">));</span>
+</pre></div>
+</div>
+<p>The replaceOne operation returns a <tt class="docutils literal"><span class="pre">UpdateResult</span></tt> which contains information about the operation.
+The <tt class="docutils literal"><span class="pre">getModifiedCount</span></tt> method returns the number of documents modified.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p>If no document matches the update condition, the default behavior of
+the update method is to do nothing. By specifying the <tt class="docutils literal"><span class="pre">upsert</span></tt>
+option to true, the update operation either updates matching
+document(s) or inserts a new document if no matching document exists.
+In the Java Driver documentation, see <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#updateOne-org.bson.conversions.Bson-org.bson.conversions.Bson-">updateOne</a>, <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#updateMany-org.bson.conversions.Bson-org.bson.conversions.Bson-">updateMany</a>, and <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#replaceOne-org.bson.conversions.Bson-TDocument-">replaceOne</a> as well as <a class="reference external" href="http://api.mongodb.org/java/3.0/com/mongodb/client/model/UpdateOptions.html">updateOptions</a>.</p>
+<p>In MongoDB, write operations are atomic on the level of a single
+document. If a single update operation modifies multiple documents of
+a collection, the operation can interleave with other write
+operations on that collection. In the MongoDB Manual, see
+<a class="reference external" href="http://docs.mongodb.org/manual/core/write-operations-atomicity">Atomicity</a>.</p>
+<p>For all available update operators, see the <a class="reference external" href="http://docs.mongodb.org/manual/reference/operator/update">Update Operators</a> reference page in the MongoDB Manual.</p>
+</div>
+</div>
+
+                
+    <div id="btnv">
+      <span class="btn-arrow-left">&larr; &nbsp;</span>
+      <a class="btn-prev-text" href="query.html" title="Previous Section: Find or Query Data with Java Driver"><span>Find or Query Data with Java Driver</span></a>
+      <a class="btn-next-text" href="remove.html" title="Next Section: Remove Data with Java Driver"><span>Remove Data with Java Driver</span></a>
+      <span class="btn-arrow-right">&nbsp;&rarr;</span>
+    </div>
+                  <div class="footer">
+                    <div class="copyright">
+                      <p>Copyright &copy; 2011-2015 <a class="smalltext" href="http://www.mongodb.com">MongoDB, Inc</a>. Licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/ ">Creative Commons</a>. MongoDB, Mongo, and the leaf logo are registered trademarks of MongoDB, Inc.</p>
+                    </div>
+                  </div>
+              </div></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+      <div class="wrapper">
+             <div class="toc">
+               <span class="toc-header">ON THIS PAGE</span>
+               <ul>
+<li><a class="reference internal" href="#">Update Data with Java Driver</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#update-specific-fields">Update Specific Fields</a><ul>
+<li><a class="reference internal" href="#update-top-level-fields">Update Top-Level Fields</a></li>
+<li><a class="reference internal" href="#update-an-embedded-field">Update an Embedded Field</a></li>
+<li><a class="reference internal" href="#update-multiple-documents">Update Multiple Documents</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#replace-a-document">Replace a Document</a></li>
+<li><a class="reference internal" href="#additional-information">Additional Information</a></li>
+</ul>
+</li>
+</ul>
+
+             </div>
+          <div class="report-link">
+            <a class="jira-link jirafeedback" href="https://jira.mongodb.org/secure/CreateIssueDetails!init.jspa?pid=10380&issuetype=4&priority=4&summary=Comment+on%3a+%22update%2Etxt%22" target="_blank" title="Report a problem with update.txt on Jira">Report a Problem</a>
+          </div>
+        
+           <div class="social">
+             <a class="twitter-icon" href="https://twitter.com/mongodbinc"><i class="fa fa-twitter-square"></i></a>
+             <a class="youtube-icon" href="http://www.youtube.com/user/MongoDB"><i class="fa fa-youtube-square"></i></a>
+             <a class="facebook-icon" href="https://www.facebook.com/mongodb"><i class="fa fa-facebook-square"></i></a>
+             <a class="gplus-icon" href="https://plus.google.com/u/1/101024085748034940765/posts?cfem=1"><i class="fa fa-google-plus-square"></i></a>
+           </div>
+        
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <script type="text/javascript">
+document.write(unescape("%3Cscript src='" + document.location.protocol + "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>try { mktoMunchkin("017-HGS-593"); } catch(e) {}</script><script type="text/javascript">
+jQuery.ajax({
+         url: "https://jira.mongodb.org/s/en_UScn8g8x/782/6/1.2.5/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?collectorId=298ba4e7",
+         type: "get",
+         cache: true,
+         dataType: "script"
+        });
+window.ATL_JQ_PAGE_PROPS =  {
+        "triggerFunction": function(showCollectorDialog) {
+                jQuery(".jirafeedback").click(function(e) {e.preventDefault();showCollectorDialog();});},
+                fieldValues: {component: 'primer', summary: 'Comment on: "primer/update.txt"'},
+                environment: {'repo': 'docs','source': 'update'}
+                };
+</script>
+  <script type="text/javascript">
+  var pagename = 'update';
+  if (pagename == 'index') {
+    pagename = '';
+  }
+  window.basePath = '';
+
+  window.fullDocsPath = function(base) {
+    var path = pagename;
+
+    // skip if pagename is undefined (index.html)
+    if (path) {
+      path = pagename + '/';
+    }
+    return '/' + base + '/' + path;
+  }
+  // Bootstrap array of links that should trigger a full page reload
+  window.docsExcludedNav = [];
+
+  $(document).ready(function(){
+    $(".version-selector").on('click', function(e) {
+      e.preventDefault();
+      var base = $(e.currentTarget).data('path');
+      window.location.href = fullDocsPath(base);
+    });
+
+    $("select.language-selector").on('change', function(e) {
+      var path = $(e.currentTarget).find('option:selected').data('path');
+      window.location.href = path;
+    });
+  });
+
+  </script></body>
+</html>

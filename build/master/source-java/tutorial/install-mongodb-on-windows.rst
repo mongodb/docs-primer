@@ -1,0 +1,77 @@
+==========================
+Install MongoDB on Windows
+==========================
+
+.. default-domain:: mongodb
+
+Overview
+--------
+
+Use this tutorial to install MongoDB on a Windows systems.
+
+.. admonition:: Platform Support
+
+   Starting in version 2.2, MongoDB does not support Windows XP. Please
+   use a more recent version of Windows to use more recent releases of
+   MongoDB.
+
+.. important:: If you are running any edition of Windows Server 2008
+   R2 or Windows 7, please install `a hotfix to resolve an issue with
+   memory mapped files on Windows <http://support.microsoft.com/kb/2731284>`_.
+
+Requirements
+------------
+
+On Windows MongoDB requires Windows Server 2008 R2, Windows Vista, or
+later. The ``.msi`` installer includes all other software dependencies
+and will automatically upgrade any older version of MongoDB installed
+using an ``.msi`` file.
+
+Get MongoDB
+-----------
+
+.. include:: /includes/steps/get-mongodb-for-windows.rst
+
+Install MongoDB
+---------------
+
+Interactive Installation
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/steps/install-mongodb-on-windows.rst
+
+Unattended Installation
+~~~~~~~~~~~~~~~~~~~~~~~
+
+You may install MongoDB unattended on Windows from the command line
+using ``msiexec.exe``.
+
+.. include:: /includes/steps/install-mongodb-on-windows-unattended.rst
+
+Run MongoDB
+-----------
+
+.. warning::
+
+   Do not make :program:`mongod.exe` visible on public networks without
+   running in "Secure Mode" with the :setting:`auth` setting. MongoDB is
+   designed to be run in trusted environments, and the database does not
+   enable "Secure Mode" by default.
+
+.. include:: /includes/steps/run-mongodb-on-windows.rst
+
+.. _manually-create-windows-service:
+
+Manually Create a Windows Service for MongoDB
+---------------------------------------------
+
+You can set up the MongoDB server as a :guilabel:`Windows Service` that
+starts automatically at boot time.
+
+The following procedure assumes you have installed MongoDB using the
+``.msi`` installer with the path ``C:\mongodb\``.
+
+If you have installed in an alternative directory, you will need to
+adjust the paths as appropriate.
+
+.. include:: /includes/steps/create-manually-windows-service-for-mongodb.rst

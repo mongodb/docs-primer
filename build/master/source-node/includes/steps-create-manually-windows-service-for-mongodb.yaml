@@ -1,0 +1,87 @@
+title:
+  text: Open an Administrator command prompt.
+  character: "~"
+stepnum: 1
+ref: open-command-prompt
+action:
+  - heading:
+      text: Windows 7 / Vista / Server 2008 (and R2)
+      character: "`"
+    pre: |
+      Press ``Win + R``, then type ``cmd``, then press ``Ctrl + Shift + Enter``.
+  - heading:
+      text: Windows 8
+      character: "`"
+    pre: |
+      Press ``Win + X``, then press ``A``.
+post: |
+  Execute the remaining steps from the Administrator command prompt.
+---
+title: Create directories.
+stepnum: 2
+ref: create-directories
+pre: |
+  Create directories for your database and log files:
+action:
+  language: powershell
+  code: |
+    mkdir c:\data\db
+    mkdir c:\data\log
+---
+title: Create a configuration file.
+stepnum: 3
+ref: create-configuration-file
+pre: |
+  Create a :manual:`configuration file </reference/configuration-options>`. This file can include any
+  of the :manual:`configuration options </reference/configuration-options>` for :program:`mongod`, but
+  **must** include a valid setting for :setting:`logpath`:
+# don't wrap the text above to avoid breaking something in primer
+action:
+  pre: |
+    The following creates a configuration file, specifying both the
+    :setting:`logpath` and the :setting:`dbpath` settings in the
+    configuration file:
+  language: powershell
+  code: |
+    echo logpath=c:\data\log\mongod.log> "C:\mongodb\mongod.cfg"
+    echo dbpath=c:\data\db>> "C:\mongodb\mongod.cfg"
+---
+title: Create the MongoDB service.
+stepnum: 4
+ref: create-mongodb-service
+action:
+  - pre: "Create the MongoDB service."
+    language: powershell
+    code: |
+      sc.exe create MongoDB binPath= "\"C:\mongodb\bin\mongod.exe\" --service --config=\"C:\mongodb\mongod.cfg\"" DisplayName= "MongoDB" start= "auto"
+    post: |
+      ``sc.exe`` requires a space between "=" and the configuration values
+      (eg "binPath= "), and a "\\" to escape double quotes.
+  - pre: "If successfully created, the following log message will display:"
+    language: powershell
+    code: |
+      [SC] CreateService SUCCESS
+---
+title: Start the MongoDB service.
+stepnum: 5
+ref: start-mongodb-service
+action:
+  language: powershell
+  code: |
+    net start MongoDB
+---
+title: Stop or remove the MongoDB service as needed.
+stepnum: 6
+ref: stop-mongodb-service
+action:
+  - pre: "To stop the MongoDB service, use the following command:"
+    language: powershell
+    code: |
+      net stop MongoDB
+  - pre: |
+      To remove the MongoDB service, first stop the service and then
+      run the following command:
+    language: powershell
+    code: |
+      sc.exe delete MongoDB
+...

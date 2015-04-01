@@ -1,0 +1,4 @@
+.. placeholder for extracts-clients.yaml
+
+
+.. include:: /includes/extracts/client-sharp.rst

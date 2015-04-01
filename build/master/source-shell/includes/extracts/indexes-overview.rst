@@ -1,0 +1,22 @@
+Indexes can support the efficient execution of queries. MongoDB
+automatically creates an index on the ``_id`` field upon the
+creation of a collection.
+
+Use the :method:`~db.collection.createIndex()` method to create an
+index on a collection. Indexes can support the efficient execution of
+queries. MongoDB automatically creates an index on the ``_id`` field
+upon the creation of a collection.
+
+To create an index on a field or fields, pass to the :method:`~db.collection.createIndex()` method
+an index key specification document that lists the fields to index and
+the index type for each field:
+
+.. code-block:: javascript
+
+   { <field1>: <type1>, ...}
+
+- For an ascending index type, specify ``1`` for ``<type>``.
+- For a descending index type, specify ``-1`` for ``<type>``.
+
+:method:`~db.collection.createIndex()` only creates an index if the index does not exist.
+
