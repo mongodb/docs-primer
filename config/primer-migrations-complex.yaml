@@ -1,71 +1,53 @@
 # If migrating as *.rst from another repo,
 # Add to .gitignore
 #
-source: administration/install-on-linux.txt
+source: build/docs/source/administration/install-on-linux.txt
 target: tutorial/install-on-linux.rst
 ---
-source: includes/toc-install-on-linux-landing.yaml
+source: build/docs/source/includes/toc-install-on-linux-landing.yaml
+target: includes/toc-install-on-linux-landing.yaml
 transform:
   regex: "file: /administration/install-on-linux"
   replace: "file: /tutorial/install-on-linux"
 ---
-source: tutorial/install-mongodb-on-red-hat.txt
+source: build/docs/source/tutorial/install-mongodb-on-red-hat.txt
 target: tutorial/install-mongodb-on-red-hat.txt
-transform:
-  - regex: ":doc:`default ports </reference/default-mongodb-port>`."
-    replace: ":manual:`default ports </reference/default-mongodb-port>`."
 ---
-source: tutorial/install-mongodb-on-windows.txt
+source: build/docs/source/tutorial/install-mongodb-on-windows.txt
 target: tutorial/install-mongodb-on-windows.rst
-transform:
-  - regex: ":doc:`/core/security`"
-    replace: ":manual:`Security Concepts </core/security>`"
-  - regex: ":doc:`/reference/method"
-    replace: ":manual:`MongoDB Shell Methods </reference/methods>`"
-  - regex: ":doc:`(.*) <(/reference/configuration-options)>`"
-    replace: ":manual:`\\1 <\\2>`"
 ---
-source: includes/steps-create-manually-windows-service-for-mongodb.yaml
-transform:
-  regex: ":doc:`(.*) <(/reference/configuration-options)>`"
-  replace: ":manual:`\\1 <\\2>`"
+source: build/docs/source/includes/steps-create-manually-windows-service-for-mongodb.yaml
+target: includes/steps-create-manually-windows-service-for-mongodb.yaml
 ---
-source: includes/steps-get-mongodb-for-windows.yaml
-transform:
-  regex: ":doc:"
-  replace: ":manual:"
+source: build/docs/source/includes/steps-get-mongodb-for-windows.yaml
+target: includes/steps-get-mongodb-for-windows.yaml
 ---
-source: includes/steps-install-mongodb-on-windows-unattended.yaml
-transform:
-  regex: ":doc:"
-  replace: ":manual:"
+source: build/docs/source/includes/steps-install-mongodb-on-windows-unattended.yaml
+target: includes/steps-install-mongodb-on-windows-unattended.yaml
 ---
-source:  includes/fact-selinux-redhat-options.rst
-transform:
-  regex: ":doc:"
-  replace: ":manual:"
+source: build/docs/source/includes/fact-selinux-redhat-options.rst
+target: includes/fact-selinux-redhat-options.rst
 ---
-source: includes/steps-run-mongodb-on-linux.yaml
+source: build/docs/source/includes/steps-run-mongodb-on-linux.yaml
+target: includes/steps-run-mongodb-on-linux.yaml
 truncate:
    end-before: "# End-for-getting-started-guide"
 ---
-source: includes/steps-run-mongodb-on-a-linux-distribution.yaml
+source: build/docs/source/includes/steps-run-mongodb-on-a-linux-distribution.yaml
+target: includes/steps-run-mongodb-on-a-linux-distribution.yaml
 truncate:
    end-before: "# End-for-getting-started-guide"
 ---
-source: includes/steps-run-mongodb-on-debian.yaml
+source: build/docs/source/includes/steps-run-mongodb-on-debian.yaml
+target: includes/steps-run-mongodb-on-debian.yaml
 truncate:
    end-before: "# End-for-getting-started-guide"
 ---
-source: includes/steps-run-mongodb-on-windows.yaml
-transform:
-  - regex: ":doc:"
-    replace: ":manual:"
+source: build/docs/source/includes/steps-run-mongodb-on-windows.yaml
+target: includes/steps-run-mongodb-on-windows.yaml
 truncate:
    end-before: "# End-for-getting-started-guide"
 ---
+target: build/docs/source/includes/list-mongodb-org-packages.rst
 source: includes/list-mongodb-org-packages.rst
-transform:
-  regex: ":doc:`(.*) <(.*)>`"
-  replace: ":manual:`\\1 <\\2>`"
 ...

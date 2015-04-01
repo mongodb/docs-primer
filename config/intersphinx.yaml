@@ -1,1 +1,8 @@
-../../config/intersphinx.yaml
+name: pymongo
+url: http://api.mongodb.org/python/current/
+path: pymongo.inv
+---
+name: doc
+url: http://docs.mongodb.org/manual/
+path: doc.inv
+...

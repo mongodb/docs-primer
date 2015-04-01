@@ -31,7 +31,6 @@ system:
     - 'sphinx_local.yaml'
     - intersphinx:
         - 'intersphinx.yaml'
-        - 'intersphinx-local.yaml'
     - migrations:
         - 'primer-migrations-complex.yaml'
         - 'primer-migrations-simple.yaml'
@@ -39,6 +38,9 @@ system:
         - 'primer-migrations-java-examples.yaml'
         - 'primer-migrations-csharp-examples.yaml'
 assets:
+  - branch: master
+    path: build/docs
+    repository: https://github.com/mongodb/docs.git
   - branch: master
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
