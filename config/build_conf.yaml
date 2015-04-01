@@ -1,12 +1,12 @@
 git:
   remote:
-    upstream: 'mongodb/docs'
+    upstream: 'mongodb/docs-primer'
     tools: 'mongodb/docs-tools'
 project:
   name: 'primer'
   tag: 'primer'
-  url: 'http://docs.mongodb.org/primer'
-  title: 'MongoDB Primer'
+  url: 'http://docs.mongodb.org/getting-started'
+  title: 'Getting Started With MongoDB'
   branched: false
   editions:
     - name: shell

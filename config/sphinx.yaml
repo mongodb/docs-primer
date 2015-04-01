@@ -6,6 +6,8 @@ editions:
   - 'python'
   - 'java'
   - 'cpp'
+  - 'node'
+  - 'csharp'
 ### --- ####
 java-web-base:
   edition: java
@@ -15,13 +17,6 @@ java-web-base:
     - hosted
     - web
     - website
-java-print-base:
-  edition: java
-  inherit: java-base
-  tags:
-    - hosted
-    - java
-    - print
 
 node-web-base:
   edition: node
@@ -31,13 +26,6 @@ node-web-base:
     - hosted
     - web
     - website
-node-print-base:
-  edition: node
-  inherit: node-base
-  tags:
-    - hosted
-    - node
-    - print
 
 python-web-base:
   edition: python
@@ -46,12 +34,6 @@ python-web-base:
     - python
     - web
     - website
-python-print-base:
-  edition: python
-  inherit: python-base
-  tags:
-    - python
-    - print
 
 shell-web-base:
   edition: shell
@@ -60,12 +42,7 @@ shell-web-base:
     - shell
     - web
     - website
-shell-print-base:
-  edition: shell
-  inherit: shell-base
-  tags:
-    - shell
-    - print
+
 cpp-web-base:
   edition: cpp
   inherit: cpp-base
@@ -73,12 +50,14 @@ cpp-web-base:
     - cpp
     - web
     - website
-cpp-print-base:
-  edition: cpp
-  inherit: cpp-base
+
+csharp-web-base:
+  edition: csharp
+  inherit: csharp-base
   tags:
-    - cpp
-    - print
+    - csharp
+    - web
+    - website
 
 ### --- ####
 dirhtml-python:
@@ -87,21 +66,6 @@ dirhtml-python:
 html-python:
   builder: html
   inherit: python-web-base
-gettext-python:
-  builder: gettext
-  inherit: python-web-base
-singlehtml-python:
-  builder: singlehtml
-  inherit: python-web-base
-epub-python:
-  builder: epub
-  inherit: python-print-base
-latex-python:
-  builder: latex
-  inherit: python-print-base
-json-python:
-  builder: json
-  inherit: python-web-base
 
 dirhtml-java:
   builder: dirhtml
@@ -109,21 +73,6 @@ dirhtml-java:
 html-java:
   builder: html
   inherit: java-web-base
-gettext-java:
-  builder: gettext
-  inherit: java-web-base
-singlehtml-java:
-  builder: singlehtml
-  inherit: java-web-base
-epub-java:
-  builder: epub
-  inherit: java-print-base
-json-java:
-  builder: json
-  inherit: java-web-base
-latex-java:
-  builder: latex
-  inherit: java-print-base
 
 dirhtml-node:
   builder: dirhtml
@@ -131,21 +80,6 @@ dirhtml-node:
 html-node:
   builder: html
   inherit: node-web-base
-gettext-node:
-  builder: gettext
-  inherit: node-web-base
-singlehtml-node:
-  builder: singlehtml
-  inherit: node-web-base
-epub-node:
-  builder: epub
-  inherit: node-print-base
-json-node:
-  builder: json
-  inherit: node-web-base
-latex-node:
-  builder: latex
-  inherit: node-print-base
 
 dirhtml-shell:
   builder: dirhtml
@@ -153,21 +87,6 @@ dirhtml-shell:
 html-shell:
   builder: html
   inherit: shell-web-base
-gettext-shell:
-  builder: gettext
-  inherit: shell-web-base
-singlehtml-shell:
-  builder: singlehtml
-  inherit: shell-web-base
-epub-shell:
-  builder: epub
-  inherit: shell-print-base
-json-shell:
-  builder: json
-  inherit: shell-web-base
-latex-shell:
-  builder: latex
-  inherit: shell-print-base
 
 dirhtml-cpp:
   builder: dirhtml
@@ -175,21 +94,13 @@ dirhtml-cpp:
 html-cpp:
   builder: html
   inherit: cpp-web-base
-gettext-cpp:
-  builder: gettext
-  inherit: cpp-web-base
-singlehtml-cpp:
-  builder: singlehtml
-  inherit: cpp-web-base
-epub-cpp:
-  builder: epub
-  inherit: cpp-print-base
-latex-cpp:
-  builder: latex
-  inherit: cpp-print-base
-json-cpp:
-  builder: json
-  inherit: cpp-web-base
+
+dirhtml-csharp:
+  builder: dirhtml
+  inherit: csharp-web-base
+html-cpp:
+  builder: html
+  inherit: csharp-web-base
 ### --- ####
 root-base:
   languages: ['es', 'fr', 'ja', 'it', 'zh']
@@ -229,5 +140,9 @@ shell-base:
 cpp-base:
   inherit: drivers-base
   edition: cpp
+  excluded: []
+csharp-base:
+  inherit: drivers-base
+  edition: csharp
   excluded: []
 ...
