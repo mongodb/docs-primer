@@ -1,8 +1,0 @@
-In the MongoDB Manual, see :method:`~db.collection.remove()` and :method:`~db.collection.drop()`.
-
-In MongoDB, write operations are atomic on the level of a single
-document. If a single remove operation removes multiple documents from
-a collection, the operation can interleave with other write operations
-on that collection. In the MongoDB Manual, see
-:manual:`Atomicity </core/write-operations-atomicity>`.
-

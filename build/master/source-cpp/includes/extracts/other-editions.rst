@@ -1,5 +1,0 @@
-After you have installed the MongoDB, you can continue with the
-getting started guide using either the :program:`mongo` shell or one
-of the available drivers.
-
-

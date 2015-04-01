@@ -1,8 +1,0 @@
-You can use the :method:`~db.collection.remove()` method to remove
-documents from a collection. The method takes a conditions document
-that determines the documents to remove.
-
-To specify a remove condition, use the same structure and syntax as the
-query conditions. See :doc:`/query` for an introduction to query
-conditions.
-
