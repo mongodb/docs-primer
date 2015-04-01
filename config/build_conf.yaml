@@ -32,8 +32,7 @@ system:
     - intersphinx:
         - 'intersphinx.yaml'
     - migrations:
-        - 'primer-migrations-complex.yaml'
-        - 'primer-migrations-simple.yaml'
+        - 'primer-migrations-docs.yaml'
         - 'primer-migrations-cpp-examples.yaml'
         - 'primer-migrations-java-examples.yaml'
         - 'primer-migrations-csharp-examples.yaml'

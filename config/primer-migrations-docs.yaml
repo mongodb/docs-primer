@@ -1,0 +1,171 @@
+# If migrating as *.rst from another repo,
+# Add to .gitignore
+#
+source: build/docs/source/administration/install-on-linux.txt
+target: tutorial/install-on-linux.txt
+---
+source: build/docs/source/includes/toc-install-on-linux-landing.yaml
+target: includes/toc-install-on-linux-landing.yaml
+transform:
+  regex: "file: /administration/install-on-linux"
+  replace: "file: /tutorial/install-on-linux"
+---
+source: build/docs/source/tutorial/install-mongodb-on-red-hat.txt
+target: tutorial/install-mongodb-on-red-hat.txt
+transform:
+  - regex: ":doc:`default ports </reference/default-mongodb-port>`."
+    replace: ":manual:`default ports </reference/default-mongodb-port>`."
+---
+source: build/docs/source/tutorial/install-mongodb-on-windows.txt
+target: tutorial/install-mongodb-on-windows.txt
+transform:
+  - regex: ":doc:`/core/security`"
+    replace: ":manual:`Security Concepts </core/security>`"
+  - regex: ":doc:`/reference/method"
+    replace: ":manual:`MongoDB Shell Methods </reference/methods>`"
+  - regex: ":doc:`(.*) <(/reference/configuration-options)>`"
+    replace: ":manual:`\\1 <\\2>`"
+---
+source: build/docs/source/includes/steps-create-manually-windows-service-for-mongodb.yaml
+target: includes/steps-create-manually-windows-service-for-mongodb.yaml
+transform:
+  regex: ":doc:`(.*) <(/reference/configuration-options)>`"
+  replace: ":manual:`\\1 <\\2>`"
+---
+source: build/docs/source/includes/steps-get-mongodb-for-windows.yaml
+target: includes/steps-get-mongodb-for-windows.yaml
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
+---
+source: build/docs/source/includes/steps-install-mongodb-on-windows-unattended.yaml
+target: includes/steps-install-mongodb-on-windows-unattended.yaml
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
+---
+source: build/docs/source/includes/fact-selinux-redhat-options.rst
+target: includes/fact-selinux-redhat-options.rst
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
+---
+source: build/docs/source/includes/steps-run-mongodb-on-linux.yaml
+target: includes/steps-run-mongodb-on-linux.yaml
+truncate:
+   end-before: "# End-for-getting-started-guide"
+---
+source: build/docs/source/includes/steps-run-mongodb-on-a-linux-distribution.yaml
+target: includes/steps-run-mongodb-on-a-linux-distribution.yaml
+truncate:
+   end-before: "# End-for-getting-started-guide"
+---
+source: build/docs/source/includes/steps-run-mongodb-on-debian.yaml
+target: includes/steps-run-mongodb-on-debian.yaml
+truncate:
+   end-before: "# End-for-getting-started-guide"
+---
+source: build/docs/source/includes/steps-run-mongodb-on-windows.yaml
+target: includes/steps-run-mongodb-on-windows.yaml
+truncate:
+   end-before: "# End-for-getting-started-guide"
+transform:
+  - regex: ":doc:"
+    replace: ":manual:"
+---
+source: build/docs/source/includes/list-mongodb-org-packages.rst
+target: includes/list-mongodb-org-packages.rst
+transform:
+  regex: ":doc:`(.*) <(.*)>`"
+  replace: ":manual:`\\1 <\\2>`"
+---
+source: build/docs/source/includes/fact-installation-bind-ip-default-in-config.rst
+target: includes/fact-installation-bind-ip-default-in-config.rst
+---
+source: build/docs/source/includes/release-base.yaml
+target: includes/release-base.yaml
+---
+source: build/docs/source/includes/release-pinning.yaml
+target: includes/release-pinning.yaml
+---
+source: build/docs/source/includes/release-specifications.yaml
+target: includes/release-specifications.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-linux.yaml
+target: includes/steps-install-mongodb-on-linux.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-debian.yaml
+target: includes/steps-install-mongodb-on-debian.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-linux-32.yaml
+target: includes/steps-install-mongodb-on-linux-32.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-linux-64.yaml
+target: includes/steps-install-mongodb-on-linux-64.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-osx-manually.yaml
+target: includes/steps-install-mongodb-on-osx-manually.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-osx-with-homebrew.yaml
+target: includes/steps-install-mongodb-on-osx-with-homebrew.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-red-hat.yaml
+target: includes/steps-install-mongodb-on-red-hat.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-ubuntu.yaml
+target: includes/steps-install-mongodb-on-ubuntu.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-amazon.yaml
+target: includes/steps-install-mongodb-on-amazon.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-suse.yaml
+target: includes/steps-install-mongodb-on-suse.yaml
+---
+source: build/docs/source/includes/steps-install-mongodb-on-windows.yaml
+target: includes/steps-install-mongodb-on-windows.yaml
+---
+source: build/docs/source/includes/toc-installation-linux.yaml
+target: includes/toc-installation-linux.yaml
+---
+source: build/docs/source/includes/toc-installation-osx.yaml
+target: includes/toc-installation-osx.yaml
+---
+source: build/docs/source/includes/toc-installation-windows.yaml
+target: includes/toc-installation-windows.yaml
+---
+source: build/docs/source/includes/toc-spec-installation-linux-other.yaml
+target: includes/toc-spec-installation-linux-other.yaml
+---
+source: build/docs/source/includes/toc-spec-installation-linux-packages.yaml
+target: includes/toc-spec-installation-linux-packages.yaml
+---
+source: build/docs/source/tutorial/install-mongodb-on-debian.txt
+target: tutorial/install-mongodb-on-debian.txt
+---
+source: build/docs/source/tutorial/install-mongodb-on-linux.txt
+target: tutorial/install-mongodb-on-linux.txt
+---
+source: build/docs/source/tutorial/install-mongodb-on-os-x.txt
+target: tutorial/install-mongodb-on-os-x.txt
+---
+source: build/docs/source/tutorial/install-mongodb-on-ubuntu.txt
+target: tutorial/install-mongodb-on-ubuntu.txt
+---
+source: build/docs/source/tutorial/install-mongodb-on-amazon.txt
+target: tutorial/install-mongodb-on-amazon.txt
+---
+source: build/docs/source/tutorial/install-mongodb-on-suse.txt
+target: tutorial/install-mongodb-on-suse.txt
+---
+source: build/docs/source/includes/driver-table.rst
+target: includes/driver-table.rst
+---
+source: build/docs/source/includes/fact-installation-directories.rst
+target: includes/fact-installation-directories.rst
+---
+source: build/docs/source/includes/note-package-change.rst
+target: includes/note-package-change.rst
+---
+source: build/docs/source/includes/note-suse-ulimit.rst
+target: includes/note-suse-ulimit.rst
+...
