@@ -2,7 +2,7 @@
 # Add to .gitignore
 #
 source: build/docs/source/administration/install-on-linux.txt
-target: tutorial/install-on-linux.rst
+target: tutorial/install-on-linux.txt
 ---
 source: build/docs/source/includes/toc-install-on-linux-landing.yaml
 target: includes/toc-install-on-linux-landing.yaml
@@ -12,21 +12,43 @@ transform:
 ---
 source: build/docs/source/tutorial/install-mongodb-on-red-hat.txt
 target: tutorial/install-mongodb-on-red-hat.txt
+transform:
+  - regex: ":doc:`default ports </reference/default-mongodb-port>`."
+    replace: ":manual:`default ports </reference/default-mongodb-port>`."
 ---
 source: build/docs/source/tutorial/install-mongodb-on-windows.txt
-target: tutorial/install-mongodb-on-windows.rst
+target: tutorial/install-mongodb-on-windows.txt
+transform:
+  - regex: ":doc:`/core/security`"
+    replace: ":manual:`Security Concepts </core/security>`"
+  - regex: ":doc:`/reference/method"
+    replace: ":manual:`MongoDB Shell Methods </reference/methods>`"
+  - regex: ":doc:`(.*) <(/reference/configuration-options)>`"
+    replace: ":manual:`\\1 <\\2>`"
 ---
 source: build/docs/source/includes/steps-create-manually-windows-service-for-mongodb.yaml
 target: includes/steps-create-manually-windows-service-for-mongodb.yaml
+transform:
+  regex: ":doc:`(.*) <(/reference/configuration-options)>`"
+  replace: ":manual:`\\1 <\\2>`"
 ---
 source: build/docs/source/includes/steps-get-mongodb-for-windows.yaml
 target: includes/steps-get-mongodb-for-windows.yaml
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
 ---
 source: build/docs/source/includes/steps-install-mongodb-on-windows-unattended.yaml
 target: includes/steps-install-mongodb-on-windows-unattended.yaml
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
 ---
 source: build/docs/source/includes/fact-selinux-redhat-options.rst
 target: includes/fact-selinux-redhat-options.rst
+transform:
+  regex: ":doc:"
+  replace: ":manual:"
 ---
 source: build/docs/source/includes/steps-run-mongodb-on-linux.yaml
 target: includes/steps-run-mongodb-on-linux.yaml
@@ -47,7 +69,13 @@ source: build/docs/source/includes/steps-run-mongodb-on-windows.yaml
 target: includes/steps-run-mongodb-on-windows.yaml
 truncate:
    end-before: "# End-for-getting-started-guide"
+transform:
+  - regex: ":doc:"
+    replace: ":manual:"
 ---
-target: build/docs/source/includes/list-mongodb-org-packages.rst
-source: includes/list-mongodb-org-packages.rst
+source: build/docs/source/includes/list-mongodb-org-packages.rst
+target: includes/list-mongodb-org-packages.rst
+transform:
+  regex: ":doc:`(.*) <(.*)>`"
+  replace: ":manual:`\\1 <\\2>`"
 ...

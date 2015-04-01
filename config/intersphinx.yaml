@@ -2,7 +2,7 @@ name: pymongo
 url: http://api.mongodb.org/python/current/
 path: pymongo.inv
 ---
-name: doc
+name: manual
 url: http://docs.mongodb.org/manual/
-path: doc.inv
+path: manual.inv
 ...
