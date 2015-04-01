@@ -37,6 +37,6 @@ source/tutorial/install-mongodb-on-*.txt
 !source/includes/steps-client-*.yaml
 !source/includes/steps-getting-started-prereq.yaml
 !source/includes/client-*rst
-!primer/source/includes/steps-primer*yaml
-!primer/source/includes/prereq-*.rst
-primer/source/includes/table-linux-kernel-version-production.yaml
+!source/includes/steps-primer*yaml
+!source/includes/prereq-*.rst
+!source/includes/toc-primer-root.yaml
