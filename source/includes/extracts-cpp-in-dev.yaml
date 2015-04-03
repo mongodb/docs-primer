@@ -1,0 +1,9 @@
+ref: cpp-driver-in-dev-only
+edition: cpp
+content: |
+
+  .. warning:: 
+
+     The Getting Started guide uses a version of C++
+     driver that is currently in development.
+...

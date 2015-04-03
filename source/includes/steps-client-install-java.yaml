@@ -2,13 +2,9 @@ title: "Download the MongoDB Java Driver and the BSON library."
 edition: java
 ref: download-java
 content: |
-  From the
-  `Java Driver Installation Page <http://mongodb.github.io/mongo-java-driver/current/getting-started/installation-guide/>`_,
-  follow the instructions to 
-  `install the MongoDB Java Driver <http://mongodb.github.io/mongo-java-driver/current/getting-started/installation-guide/#mongodb-driver:9d4f5debee078ff2736b8039cc26277c>`_
-  as well as to `install the BSON library <http://mongodb.github.io/mongo-java-driver/current/getting-started/installation-guide/#bson:9d4f5debee078ff2736b8039cc26277c>`_.
-  The page provides details to install via a dependency management
-  system or to download the jars directly from The Central Repository.
+  Follow the instructions to install the 
+  `MongoDB Java Driver <http://mongodb.github.io/mongo-java-driver/3.0/driver/getting-started/installation-guide/#mongodb-driver>`_
+  as well as the `BSON library <http://mongodb.github.io/mongo-java-driver/3.0/bson/installation-guide/>`_.
 ---
 title: "Connect to MongoDB."
 edition: java

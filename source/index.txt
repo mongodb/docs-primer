@@ -5,9 +5,10 @@
 Overview
 --------
 
-Welcome to the Getting Started with MongoDB guide. This guide outlines
-the process for installing MongoDB (in the `MongoDB Shell Edition
-<../shell>`_ only) and gets you started using MongoDB.
+Welcome to the Getting Started with MongoDB guide. This guide provides
+instructions to get you started using MongoDB. The `mongo Shell Edition
+<../shell>`_ of this guide also includes instructions for installing
+MongoDB.
 
 Available Editions
 ------------------
@@ -15,7 +16,7 @@ Available Editions
 This is the :doc:`/client` edition of the guide. The Getting Started
 guide is available in the following editions:
 
-.. include:: /includes/list-getting-started-drivers.rst
+.. include:: /includes/extracts/gs-editions.rst
 
 .. include:: /includes/toc/primer-root.rst
 
