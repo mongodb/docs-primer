@@ -41,4 +41,4 @@ Available Getting Started Guides
 The Getting Started with MongoDB guide is available in the following
 editions:
 
-.. include:: /includes/extracts/gs-editions.rst
+.. include:: /includes/extracts/gs-drivers-editions.rst
