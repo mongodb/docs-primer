@@ -1,3 +1,12 @@
+target: push
+paths:
+  remote: /data/sites/docs/getting-started
+  local: public
+options:
+  - 'recursive'
+env: publication
+dependency: push-if-up-to-date
+---
 target: stage
 paths:
   remote: /srv/public/test/primer
