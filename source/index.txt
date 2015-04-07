@@ -23,5 +23,9 @@ guide is available in the following editions:
 Additional Information
 ----------------------
 
-For a comprehensive documentation of MongoDB, see :manual:`The MongoDB
-Manual </>`.
+For more information, see:
+
+- :manual:`The MongoDB Manual </>` for a comprehensive documentation of MongoDB
+- `MongoDB University: Free, Online Courses for Developers and DBAs <https://education.mongodb.com/>`_
+- `MongoDB Architecture Guide <https://www.mongodb.com/lp/whitepaper/architecture-guide>`_
+- `MongoDB Administration 101 Presentation <http://www.mongodb.com/presentations/webinar-mongodb-administration-101>`_
