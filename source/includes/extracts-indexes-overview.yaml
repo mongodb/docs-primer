@@ -94,15 +94,15 @@ inherit:
   ref: _indexes-overview
   file: extracts-indexes-overview-base.yaml
 pre: |
-  .. _IMongoIndexManager.CreateOneAsync: http://api.mongodb.org/csharp/2.0.0/html/96a9b8cf-8df5-398f-8e26-ff1b4be6292b.htm
-  .. _IndexKeysDefinitionBuilder: http://api.mongodb.org/csharp/2.0.0/html/39b2c41c-25e1-7d79-4a80-a074ee7fc35e.htm
-  .. _Ascending: http://api.mongodb.org/csharp/2.0.0/html/765c812c-34b9-66dd-fd37-2cf54731b47a.htm
-  .. _Descending: http://api.mongodb.org/csharp/2.0.0/html/fa02e4e1-d520-7993-08ee-5cf7973adeee.htm
-  .. _CreateIndexOptions: http://api.mongodb.org/csharp/2.0.0/html/539c76c8-a1bc-bc58-3a88-e2316915153f.htm
+  .. |IMongoIndexManager.CreateOneAsync| replace:: :csharp-api:`IMongoIndexManager.CreateOneAsync </M_MongoDB_Driver_IMongoIndexManager_1_CreateOneAsync>`
+  .. |IndexKeysDefinitionBuilder| replace:: :csharp-api:`IndexKeysDefinitionBuilder </T_MongoDB_Driver_IndexKeysDefinitionBuilder_1>`
+  .. |Ascending| replace:: :csharp-api:`Ascending </Overload_MongoDB_Driver_IndexKeysDefinitionBuilder_1_Ascending>`
+  .. |Descending| replace:: :csharp-api:`Descending </Overload_MongoDB_Driver_IndexKeysDefinitionBuilder_1_Descending>`
+  .. |CreateIndexOptions| replace:: :csharp-api:`CreateIndexOptions </T_MongoDB_Driver_CreateIndexOptions>`
 post: |
    To create an index on a field or fields, pass to the {{index}}
    method an index key specification. With the C# MongoDB driver, use
-   the methods available in the IndexKeysDefinitionBuilder_ class to
+   the methods available in the |IndexKeysDefinitionBuilder| class to
    specify the index key specification.
 
    .. code-block:: javascript
@@ -110,11 +110,11 @@ post: |
       var keys = Builders<BsonDocument>.IndexKeys.Ascending(<field1>).Ascending(<field2>);
       await collection.Indexes.CreateOneAsync(keys);
 
-   - For an ascending index type, use the Ascending_ method.
-   - For a descending index type, use the Descending_ method.
+   - For an ascending index type, use the |Ascending| method.
+   - For a descending index type, use the |Descending| method.
 
    {{index}} only creates an index if the index does not exist.
 
 replacement:
-  index: "`IMongoIndexManager.CreateOneAsync`_" 
+  index: "|IMongoIndexManager.CreateOneAsync|" 
 ...

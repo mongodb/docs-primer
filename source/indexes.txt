@@ -22,3 +22,5 @@ Additional Information
 ----------------------
 
 .. include:: /includes/extracts/indexes-additional-info.rst
+
+.. seealso:: :manual:`The MongoDB Manual </>`

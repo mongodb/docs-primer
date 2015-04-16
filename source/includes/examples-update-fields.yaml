@@ -424,11 +424,11 @@ pre: |
   ``lastModified`` field.
 
   To specify a :update:`$set` operation to update the ``cuisine``
-  field, use the Set_ method of the UpdateDefinitionBuilder_.
+  field, use the |Set| method of the |UpdateDefinitionBuilder|.
 
   To specify a :update:`$currentDate` operation to update the
-  ``lastModified`` field with the current date, use the CurrentDate_
-  method of the UpdateDefinitionBuilder_.
+  ``lastModified`` field with the current date, use the |CurrentDate|
+  method of the |UpdateDefinitionBuilder|.
 operation:
   - literalinclude: includes/example-csharp-update-top-level-fields.cs
     language: csharp
@@ -472,5 +472,5 @@ pre: |
   field to ``"Manhattan"`` and the ``lastModified`` field to the current
   date.
 replacement:
-  updateMethod: "UpdateManyAsync_"
+  updateMethod: "|UpdateManyAsync|"
 ...

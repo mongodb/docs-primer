@@ -55,6 +55,6 @@ inherit:
   file: extracts-insert-additional-info-base.yaml
 replacement:
   driver: "C# Driver documentation"
-  insert: "InsertOneAsync_, InsertManyAsync_"
-  document: BsonDocument_
+  insert: "|InsertOneAsync|, |InsertManyAsync|"
+  document: "|BsonDocument|"
 ...

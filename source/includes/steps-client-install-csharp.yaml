@@ -19,8 +19,8 @@ title: "Connect to MongoDB."
 edition: csharp
 ref: connect-mongodb-csharp
 pre: |
-  Use MongoClient_  to connect to a running
-  :program:`mongod` instance.
+  Use :csharp-api:`MongoClient </T_MongoDB_Driver_MongoClient>` to
+  connect to a running :program:`mongod` instance.
 action:
   - pre: |
        Add the following ``using`` statements in your C# program.
@@ -41,7 +41,5 @@ action:
           _database = _client.GetDatabase("test");
 post: |
   To specify a different host and port for the :program:`mongod` instance, see
-  the MongoClient_ API page.
- 
-  .. _MongoClient: http://api.mongodb.org/csharp/2.0.0/html/70ea37fb-6258-c51a-db65-d3b6e255f36e.htm
+  the :csharp-api:`MongoClient </T_MongoDB_Driver_MongoClient>` API page.
 ...

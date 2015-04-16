@@ -42,3 +42,5 @@ The Getting Started with MongoDB guide is available in the following
 editions:
 
 .. include:: /includes/extracts/gs-drivers-editions.rst
+
+.. seealso:: :manual:`The MongoDB Manual </>`

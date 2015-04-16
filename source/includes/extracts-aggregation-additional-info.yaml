@@ -55,5 +55,5 @@ inherit:
   file: extracts-aggregation-additional-info-base.yaml
 replacement:
   driver: "C# Driver documentation"
-  aggregate: "Aggregate_"
+  aggregate: "|Aggregate| and |AggregateFluentBase|"
 ...

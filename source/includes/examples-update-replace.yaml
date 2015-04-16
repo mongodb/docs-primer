@@ -164,5 +164,5 @@ pre: ""
 operation:
   pre: ""
 replacement:
-  updateMethod: "ReplaceOneAsync_"
+  updateMethod: "|ReplaceOneAsync|"
 ...

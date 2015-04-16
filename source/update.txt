@@ -32,3 +32,5 @@ Additional Information
 ----------------------
 
 .. include:: /includes/extracts/update-additional-info.rst
+
+.. seealso:: :manual:`The MongoDB Manual </>`

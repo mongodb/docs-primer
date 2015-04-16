@@ -52,5 +52,5 @@ inherit:
   file: extracts-update-additional-info-base.yaml
 replacement:
   driver: "C# Driver documentation"
-  update: "UpdateOneAsync_, UpdateManyAsync_, UpdateDefinition_, and ReplaceOneAsync_"
+  update: "|UpdateOneAsync|, |UpdateManyAsync|, |UpdateDefinition|, and |ReplaceOneAsync|"
 ...

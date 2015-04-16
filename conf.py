@@ -68,15 +68,14 @@ pygments_style = 'sphinx'
 extlinks = {
     'hardlink' : ( 'http://docs.mongodb.org/{0}/%s'.format(conf.git.branches.current), ''),
     'issue': ('https://jira.mongodb.org/browse/%s', '' ),
-    'wiki': ('http://www.mongodb.org/display/DOCS/%s', ''),
     'api': ('http://api.mongodb.org/%s', ''),
     'manual': ('http://docs.mongodb.org/manual%s', ''),
     'ecosystem': ('http://docs.mongodb.org/ecosystem%s', ''),
-    'meta-driver': ('http://docs.mongodb.org/meta-driver/latest%s', ''),
-    'mms': ('https://docs.mms.mongodb.com%s', ''),
-    'mms-hosted': ('https://mms.mongodb.com/help-hosted%s', ''),
-    'mms-home': ('https://mms.mongodb.com%s', ''),
-    'about': ('http://www.mongodb.org/about%s', '')
+    'about': ('http://www.mongodb.org/about%s', ''),
+
+### We could use the already defined :api: but if we need to specify a particular driver,
+### we could just change here
+    'csharp-api': ('http://api.mongodb.org/csharp/current/html%s.htm', ''),
 }
 
 ## add `extlinks` for each published version.

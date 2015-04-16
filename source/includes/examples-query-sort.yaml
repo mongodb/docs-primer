@@ -155,9 +155,9 @@ source:
   ref: _sort
 ref: sort
 pre: |
-  To specify an order for the result set, pass to the Sort_ method the
+  To specify an order for the result set, pass to the |Sort| method the
   sort specification document. Use the methods available in the
-  SortDefinitionBuilder_ class (e.g. Ascending_ or the Descending_
+  |SortDefinitionBuilder| class (e.g. |Ascending| or the |Descending|
   method) to implement the sort specification document.
 operation:
   - pre: |

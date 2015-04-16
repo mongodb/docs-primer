@@ -387,7 +387,7 @@ operation:
   - post: |
       .. include:: /includes/fact-count-discrepancies.rst
 replacement:
-  removeMethod: "DeleteManyAsync_"
+  removeMethod: "|DeleteManyAsync|"
 ---
 edition: csharp
 source:
@@ -408,7 +408,7 @@ operation:
   - post: |
       .. include:: /includes/fact-count-discrepancies.rst
 replacement:
-  removeMethod: "DeleteManyAsync_"
+  removeMethod: "|DeleteManyAsync|"
 ---
 edition: csharp
 source:
@@ -423,5 +423,5 @@ operation:
   - literalinclude: includes/example-csharp-drop-collection-results.rst
     language: csharp
 replacement:
-  dropMethod: "DropCollectionAsync_"
+  dropMethod: "|DropCollectionAsync|"
 ...

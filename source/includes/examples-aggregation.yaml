@@ -266,7 +266,8 @@ post: |
    .. include:: /includes/fact-count-discrepancies.rst
 final: ''
 replacement:
-  stageGroup: "`Group <http://api.mongodb.org/csharp/2.0.0/html/07049bc3-cd52-ecc0-f2ee-da34c69eefee.htm>`_"
+  stageGroup: "|Group|"
+final: ""
 ---
 source:
   file: examples-aggregation-base.yaml
@@ -282,8 +283,8 @@ operation:
     language: csharp
 post: |
    .. include:: /includes/fact-count-discrepancies.rst
-final: ''
+final: ""
 replacement:
-  stageGroup: "`Group <http://api.mongodb.org/csharp/2.0.0/html/07049bc3-cd52-ecc0-f2ee-da34c69eefee.htm>`_"
-  stageMatch: "`Match <http://api.mongodb.org/csharp/2.0.0/html/345bf4d7-139d-7b56-e192-8552408400fe.htm>`_"
+  stageGroup: "|Group|"
+  stageMatch: "|Match|"
 ...

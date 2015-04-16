@@ -126,5 +126,5 @@ operation:
   - post: |
       .. include:: /includes/fact-count-discrepancies.rst
 replacement:
-  findMethod: "FindAsync_"
+  findMethod: "|FindAsync|"
 ...

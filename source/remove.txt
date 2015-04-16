@@ -23,3 +23,5 @@ Additional Information
 ----------------------
 
 .. include:: /includes/extracts/remove-additional-info.rst
+
+.. seealso:: :manual:`The MongoDB Manual </>`

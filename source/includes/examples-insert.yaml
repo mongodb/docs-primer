@@ -208,5 +208,5 @@ operation:
       .. include:: includes/example-csharp-insert-a-document-post.rst
 replacement:
   clientName: the driver
-  insertMethod: "InsertOneAsync_"
+  insertMethod: "|InsertOneAsync|"
 ...

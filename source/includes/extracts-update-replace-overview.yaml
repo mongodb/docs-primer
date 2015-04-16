@@ -41,7 +41,7 @@ inherit:
 edition: csharp
 ref: update-replace-overview
 replacement:
-  update: "ReplaceOneAsync_"
+  update: "|ReplaceOneAsync|"
 inherit:
   ref: _update-replace-overview
   file: extracts-update-replace-overview-base.yaml

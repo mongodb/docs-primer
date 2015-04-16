@@ -76,23 +76,29 @@ content: |
    The {{findAsync}} method returns query results in a {{cursor}}, which is
    an iterable object that yields documents.
 
-   The {{find}} method returns a IFindFluent_ object. You can
-   use the ToListAsync_ method to return the results as a list that
-   contains all the documents returned by the cursor. ToListAsync_ requires
+   The {{find}} method returns a |IFindFluent| object. You can
+   use the |ToListAsync| method to return the results as a list that
+   contains all the documents returned by the cursor. |ToListAsync| requires
    holding the entire result set in memory.
 post: |
-  .. _Find: http://api.mongodb.org/csharp/2.0.0/html/b95c35fa-bf8a-957e-b9e7-0d73a705cb2e.htm
-  .. _FindAsync: http://api.mongodb.org/csharp/2.0.0/html/8448c4cd-d9ab-e229-0e99-e5e9bdc15d64.htm
-  .. _IAsyncCursor: http://api.mongodb.org/csharp/2.0.0/html/a59d0e6e-deb2-f8de-deba-adecc11eb383.htm
-  .. _IFindFluent: http://api.mongodb.org/csharp/2.0.0/html/9263632e-d133-135c-7b27-e3106482072f.htm
-  .. _ToListAsync: http://api.mongodb.org/csharp/2.0.0/html/e840b5c3-bfa4-4bb6-3c27-67a2f194f6bb.htm
-  .. _BsonDocument: http://api.mongodb.org/csharp/2.0.0/html/3a31e174-4df4-91f3-6760-02078b53ddb1.htm
-  .. _SortDefinitionBuilder: http://api.mongodb.org/csharp/2.0.0/html/abcb0daf-4aab-e884-b772-9e5df303c67c.htm
-  .. _Ascending: http://api.mongodb.org/csharp/2.0.0/html/38738571-6d69-5cb9-711a-78e1b0d5aab6.htm
-  .. _Descending: http://api.mongodb.org/csharp/2.0.0/html/4b89a669-5e15-f215-acf1-a8b70c1a4965.htm
+  .. |Find| replace:: :csharp-api:`Find </Overload_MongoDB_Driver_IMongoCollectionExtensions_Find>`
+  .. |FindAsync| replace:: :csharp-api:`FindAsync </Overload_MongoDB_Driver_IMongoCollectionExtensions_FindAsync>`
+  .. |IAsyncCursor| replace:: :csharp-api:`IAsyncCursor </T_MongoDB_Driver_IAsyncCursor_1>`
+  .. |IFindFluent| replace:: :csharp-api:`IFindFluent </T_MongoDB_Driver_IFindFluent_2>`
+  .. |ToListAsync| replace:: :csharp-api:`ToListAsync </M_MongoDB_Driver_IAsyncCursorExtensions_ToListAsync__1>`
+  .. |BsonDocument| replace:: :csharp-api:`BsonDocument </T_MongoDB_Bson_BsonDocument>`
+  .. |Sort| replace:: :csharp-api:`Sort </M_MongoDB_Driver_IFindFluent_2_Sort>`
+  .. |SortDefinitionBuilder| replace:: :csharp-api:`SortDefinitionBuilder </T_MongoDB_Driver_SortDefinitionBuilder_1>`
+  .. |Ascending| replace:: :csharp-api:`Ascending </Overload_MongoDB_Driver_SortDefinitionBuilder_1_Ascending>`
+  .. |Descending| replace:: :csharp-api:`Descending </Overload_MongoDB_Driver_SortDefinitionBuilder_1_Descending>`
+  .. |FilterDefinitionBuilder| replace:: :csharp-api:`FilterDefinitionBuilder </T_MongoDB_Driver_FilterDefinitionBuilder_1>`
+  .. |Eq| replace:: :csharp-api:`Eq </Overload_MongoDB_Driver_FilterDefinitionBuilder_1_Eq>`
+  .. |Lt| replace:: :csharp-api:`Lt </Overload_MongoDB_Driver_FilterDefinitionBuilder_1_Lt>`
+  .. |Gt| replace:: :csharp-api:`Gt </Overload_MongoDB_Driver_FilterDefinitionBuilder_1_Gt>`
+
 replacement:
-  find: "Find_"
-  findAsync: "FindAsync_"
-  cursor: "IAsyncCursor_"
-  document: "BsonDocument_"
+  find: "|Find|"
+  findAsync: "|FindAsync|"
+  cursor: "|IAsyncCursor|"
+  document: "|BsonDocument|"
 ...

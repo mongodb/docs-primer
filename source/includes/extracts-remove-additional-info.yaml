@@ -55,6 +55,6 @@ inherit:
   file: extracts-remove-additional-info-base.yaml
 replacement:
   driver: "C# Driver documentation"
-  remove: "DeleteOneAsync_, DeleteManyAsync_"
-  drop: "DropCollectionAsync_"
+  remove: "|DeleteOneAsync|, |DeleteManyAsync|"
+  drop: "|DropCollectionAsync|"
 ...

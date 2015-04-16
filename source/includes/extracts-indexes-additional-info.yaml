@@ -50,5 +50,5 @@ inherit:
   file: extracts-indexes-additional-info-base.yaml
 replacement:
   driver: "C# Driver documentation"
-  index: "IMongoIndexManager.CreateOneAsync_, CreateIndexOptions_, and IndexKeysDefinitionBuilder_"
+  index: "|IMongoIndexManager.CreateOneAsync|, |CreateIndexOptions|, and |IndexKeysDefinitionBuilder|"
 ...
