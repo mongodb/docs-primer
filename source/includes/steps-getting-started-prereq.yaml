@@ -9,7 +9,7 @@ edition:
    - csharp
 content: |
   Retrieve the dataset from
-  `<https://github.com/mongodb/docs-assets/blob/primer-dataset/dataset.json>`_
+  `<https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/dataset.json>`_
   and save to a file named ``primer-dataset.json``.
 ---
 title: Import data into the collection.
