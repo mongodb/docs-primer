@@ -15,6 +15,8 @@ target: tutorial/install-mongodb-on-red-hat.txt
 transform:
   - regex: ":doc:`default ports </reference/default-mongodb-port>`."
     replace: ":manual:`default ports </reference/default-mongodb-port>`."
+truncate:
+   end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-windows.txt
 target: tutorial/install-mongodb-on-windows.txt
@@ -141,6 +143,8 @@ target: includes/toc-spec-installation-linux-packages.yaml
 ---
 source: build/docs/source/tutorial/install-mongodb-on-debian.txt
 target: tutorial/install-mongodb-on-debian.txt
+truncate:
+   end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-linux.txt
 target: tutorial/install-mongodb-on-linux.txt
@@ -150,12 +154,18 @@ target: tutorial/install-mongodb-on-os-x.txt
 ---
 source: build/docs/source/tutorial/install-mongodb-on-ubuntu.txt
 target: tutorial/install-mongodb-on-ubuntu.txt
+truncate:
+   end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-amazon.txt
 target: tutorial/install-mongodb-on-amazon.txt
+truncate:
+   end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-suse.txt
 target: tutorial/install-mongodb-on-suse.txt
+truncate:
+   end-before: Uninstall MongoDB
 ---
 source: build/docs/source/includes/driver-table.rst
 target: includes/driver-table.rst
