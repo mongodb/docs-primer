@@ -35,8 +35,11 @@ action:
       ``test`` database.
     language: csharp
     code: |
-          var client = new MongoClient();
-          var _database = client.GetDatabase("test");
+          protected static IMongoClient _client;
+          protected static IMongoDatabase _database;
+ 
+          _client = new MongoClient();
+          _database = _client.GetDatabase("test");
 post: |
   To specify a different host and port for the :program:`mongod` instance, see
   the :csharp-api:`MongoClient </T_MongoDB_Driver_MongoClient>` API page.
