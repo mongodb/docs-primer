@@ -6,9 +6,9 @@ Overview
 --------
 
 Welcome to the Getting Started with MongoDB guide. This guide provides
-instructions to get you started using MongoDB. The `mongo Shell Edition
-<../shell>`_ of this guide also includes instructions for installing
-MongoDB.
+instructions to get you started using MongoDB. The `MongoDB Shell
+Edition <../shell>`_ of this guide also includes instructions
+for installing MongoDB.
 
 Available Editions
 ------------------

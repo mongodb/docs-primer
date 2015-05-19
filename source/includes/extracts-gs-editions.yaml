@@ -1,7 +1,7 @@
 edition: shell
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ (this edition)
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ (this edition)
 
   - `Python Edition <../python/>`_ 
 
@@ -16,7 +16,7 @@ content: |
 edition: python
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ 
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ 
   
   - `Python Edition <../python/>`_ (this edition)
 
@@ -31,7 +31,7 @@ content: |
 edition: node
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ 
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ 
   
   - `Python Edition <../python/>`_
 
@@ -46,7 +46,7 @@ content: |
 edition: cpp
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ 
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ 
   
   - `Python Edition <../python/>`_
 
@@ -61,7 +61,7 @@ content: |
 edition: java
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ 
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ 
   
   - `Python Edition <../python/>`_
 
@@ -76,7 +76,7 @@ content: |
 edition: csharp
 ref:  gs-editions
 content: |
-  - `mongo JavaScript Edition <../shell/>`_ 
+  - `MongoDB Shell (mongo) Edition <../shell/>`_ 
   
   - `Python Edition <../python/>`_
 

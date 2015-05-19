@@ -34,6 +34,7 @@ source/includes/toc-*yaml
 source/includes/steps-*yaml
 source/includes/release-*yaml
 source/tutorial/install-mongodb-on-*.txt
+source/includes/fact-ubuntu-lts-support.rst
 !source/includes/steps-client-*.yaml
 !source/includes/steps-getting-started-prereq.yaml
 !source/includes/client-*rst

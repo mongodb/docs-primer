@@ -178,4 +178,7 @@ target: includes/note-package-change.rst
 ---
 source: build/docs/source/includes/note-suse-ulimit.rst
 target: includes/note-suse-ulimit.rst
+---
+source: build/docs/source/includes/fact-ubuntu-lts-support.rst
+target: /includes/fact-ubuntu-lts-support.rst
 ...
