@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+  base_url="http://docs.mongodb.org/getting-started/"
+  store_into="build/public/sitemap.xml.gz"
+  verbose="1"
+  >
+
+<directory 
+	path="build/public/shell" 
+	url="http://docs.mongodb.org/getting-started/shell"
+	default_file="index.html"
+	/>
+<directory 
+	path="build/public/cpp" 
+	url="http://docs.mongodb.org/getting-started/cpp"
+	default_file="index.html"
+	/>
+<directory 
+	path="build/public/csharp" 
+	url="http://docs.mongodb.org/getting-started/csharp"
+	default_file="index.html"
+	/>
+<directory 
+	path="build/public/java" 
+	url="http://docs.mongodb.org/getting-started/java"
+	default_file="index.html"
+	/>
+<directory 
+	path="build/public/node" 
+	url="http://docs.mongodb.org/getting-started/node"
+	default_file="index.html"
+	/>
+<directory 
+	path="build/public/python" 
+	url="http://docs.mongodb.org/getting-started/python"
+	default_file="index.html"
+	/>
+<filter  action="drop"  type="wildcard"  pattern="*~" />
+<filter  action="drop"  type="wildcard"  pattern="*.txt" />
+<filter  action="drop"  type="wildcard"  pattern="*_t" />
+<filter  action="drop"  type="wildcard"  pattern="*.inv" />
+<filter  action="drop"  type="wildcard"  pattern="*.asc" />
+<filter  action="drop"  type="wildcard"  pattern="*.js" />
+<filter  action="drop"  type="wildcard"  pattern="*.gif" />
+<filter  action="drop"  type="wildcard"  pattern="*.png" />
+<filter  action="drop"  type="regexp"  pattern="/\.[^/]*" />
+</site>

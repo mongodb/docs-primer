@@ -2,6 +2,8 @@ target: push
 paths:
   remote: /data/sites/docs/getting-started
   local: public
+  static: 
+    - 'sitemap.xml.gz'
 options:
   - 'recursive'
 env: publication
