@@ -181,4 +181,8 @@ target: includes/note-suse-ulimit.rst
 ---
 source: build/docs/source/includes/fact-ubuntu-lts-support.rst
 target: /includes/fact-ubuntu-lts-support.rst
+---
+source: build/docs/source/includes/fact-installation-64bit.rst
+target: includes/fact-installation-64bit.rst
+
 ...
