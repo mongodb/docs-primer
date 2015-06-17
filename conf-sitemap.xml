@@ -43,5 +43,12 @@
 <filter  action="drop"  type="wildcard"  pattern="*.js" />
 <filter  action="drop"  type="wildcard"  pattern="*.gif" />
 <filter  action="drop"  type="wildcard"  pattern="*.png" />
+<filter  action="drop"  type="wildcard"  pattern="*.tar.gz" />
+<filter  action="drop"  type="wildcard"  pattern="*/shell/_static/*" />
+<filter  action="drop"  type="wildcard"  pattern="*/cpp/_static/*" />
+<filter  action="drop"  type="wildcard"  pattern="*/csharp/_static/*" />
+<filter  action="drop"  type="wildcard"  pattern="*/java/_static/*" />
+<filter  action="drop"  type="wildcard"  pattern="*/node/_static/*" />
+<filter  action="drop"  type="wildcard"  pattern="*/python/_static/*" />
 <filter  action="drop"  type="regexp"  pattern="/\.[^/]*" />
 </site>
