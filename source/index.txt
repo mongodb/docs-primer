@@ -6,9 +6,21 @@ Overview
 --------
 
 Welcome to the Getting Started with MongoDB guide. This guide provides
-instructions to get you started using MongoDB. The `MongoDB Shell
-Edition <../shell>`_ of this guide also includes instructions
-for installing MongoDB.
+instructions to get you started using MongoDB. 
+
+The guide starts off with :doc:`/introduction` as well as instructions
+to :doc:`/import-data`.
+
+The guide then provides a brief overview of the :doc:`/client` and then
+provides instructions on basic CRUD operations, starting with
+:doc:`Insert </insert>` and ending with :doc:`Aggregation
+</aggregation>`.
+
+The guide also provides instructions on creating :doc:`Indexes
+</indexes>` to improve query performance.
+
+The `MongoDB Shell Edition <../shell>`_ of this guide also includes
+instructions for installing MongoDB.
 
 Available Editions
 ------------------
