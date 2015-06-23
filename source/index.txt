@@ -13,10 +13,12 @@ following topics:
 
 - A brief overview of the :doc:`/client`;
 
-- Instructions on basic CRUD operations, starting with :doc:`Insert
-  </insert>` and ending with :doc:`Aggregation </aggregation>`;
+- Basic CRUD (Create,Read,Update,Delete) operations, starting with
+  :doc:`Insert </insert>` and ending with :doc:`Aggregation
+  </aggregation>`;
 
-- Creating :doc:`Indexes </indexes>` to improve query performance.
+- Instructions on creating :doc:`Indexes </indexes>` to improve query
+  performance.
 
 The `MongoDB Shell Edition <../shell>`_ of this guide also includes
 instructions for installing MongoDB.
