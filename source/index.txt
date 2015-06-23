@@ -13,8 +13,8 @@ following topics:
 
 - A brief overview of the :doc:`/client`;
 
-- Basic CRUD (Create,Read,Update,Delete) operations, starting with
-  :doc:`Insert </insert>` and ending with :doc:`Aggregation
+- Basic :doc:`Insert </insert>`, :doc:`Find </query>`, :doc:`Update
+  </update>`, :doc:`Remove </remove>` operations plus :doc:`Aggregation
   </aggregation>`;
 
 - Instructions on creating :doc:`Indexes </indexes>` to improve query
