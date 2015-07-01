@@ -184,5 +184,13 @@ target: /includes/fact-ubuntu-lts-support.rst
 ---
 source: build/docs/source/includes/fact-installation-64bit.rst
 target: includes/fact-installation-64bit.rst
-
+---
+source: build/docs/source/includes/warning-selinux-rhel7.rst
+target: includes/warning-selinux-rhel7.rst
+---
+source: build/docs/source/includes/steps-configure-windows-service-for-mongodb.yaml
+target: includes/steps-configure-windows-service-for-mongodb.yaml
+transform:
+  - regex: ":doc:`configuration file </reference/configuration-options>`"
+    replace: ":manual:`configuration file </reference/configuration-options>`"
 ...

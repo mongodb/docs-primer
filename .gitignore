@@ -30,6 +30,7 @@ source/includes/fact-installation-bind-ip-default-in-config.rst
 source/includes/fact-installation-directories.rst
 source/includes/note-package-change.rst
 source/includes/note-suse-ulimit.rst
+source/includes/warning-selinux-rhel7.rst
 source/includes/toc-*yaml
 source/includes/steps-*yaml
 source/includes/release-*yaml
