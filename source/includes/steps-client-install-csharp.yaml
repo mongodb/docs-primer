@@ -2,8 +2,8 @@ title: "Download the MongoDB C# Driver."
 edition: csharp
 ref: download-csharp
 content: |
-  Download the driver from
-  `<http://www.nuget.org/packages/mongocsharpdriver/>`_.
+  To download the C# driver, follow the instructions found on `MongoDB
+  C#/.NET Driver <http://mongodb.github.io/mongo-csharp-driver/>`_ page.
 ---
 title: "Add Reference to C# Driver DLLs."
 edition: csharp
