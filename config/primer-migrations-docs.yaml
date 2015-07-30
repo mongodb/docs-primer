@@ -193,4 +193,7 @@ target: includes/steps-configure-windows-service-for-mongodb.yaml
 transform:
   - regex: ":doc:`configuration file </reference/configuration-options>`"
     replace: ":manual:`configuration file </reference/configuration-options>`"
+---
+source: build/docs/source/includes/extracts-fact-3.0-linux-package-repo.yaml
+target: includes/extracts-fact-3.0-linux-package-repo.yaml
 ...

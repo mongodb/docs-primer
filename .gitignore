@@ -36,6 +36,7 @@ source/includes/steps-*yaml
 source/includes/release-*yaml
 source/tutorial/install-mongodb-on-*.txt
 source/includes/fact-ubuntu-lts-support.rst
+source/includes/extracts-fact-3.0-linux-package-repo.yaml
 !source/includes/steps-client-*.yaml
 !source/includes/steps-getting-started-prereq.yaml
 !source/includes/client-*rst
