@@ -223,6 +223,16 @@ source:
   file: examples-index-base.yaml
   ref: _create-compound-index
 ref: create-compound-index
+pre: |
+  MongoDB supports :ref:`compound indexes <index-type-compound>` which
+  are indexes on multiple fields. The order of the fields determine how
+  the index stores its keys.
+
+  For example, the following operation creates a compound index on
+  the ``"cuisine"`` field and the ``"address.zipcode"`` field.
+  The index orders its entries first by ascending ``"cuisine"``
+  values, and then, within each ``"cuisine"``, by ascending
+  ``"address.zipcode"`` values.
 operation:
   - literalinclude: includes/example-csharp-create-compound-index.cs
     language: csharp
