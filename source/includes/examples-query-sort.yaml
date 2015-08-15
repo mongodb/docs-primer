@@ -141,7 +141,7 @@ operation:
   - literalinclude: includes/example-java-sort-pre1.java
     language: java
   - pre: |
-      .. include:: includes/fact-java-filters-helpers.rst
+      .. include:: includes/fact-java-sorts-helpers.rst
   - literalinclude: includes/example-java-sort-pre2.java
     language: java
 replacement:
