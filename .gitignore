@@ -43,3 +43,4 @@ source/includes/extracts-fact-3.0-linux-package-repo.yaml
 !source/includes/steps-primer*yaml
 !source/includes/prereq-*.rst
 !source/includes/toc-primer-root.yaml
+giza.log
