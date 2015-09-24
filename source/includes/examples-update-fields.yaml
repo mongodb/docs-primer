@@ -170,9 +170,9 @@ pre: |
   documents, use the {{updateMany}} method.
 
   The following operation updates *all* documents that have
-  ``address.zipcode`` field equal to ``"10016"``, setting the ``borough``
-  field to ``"Midtown"`` and the ``lastModified`` field to the current
-  date.
+  ``address.zipcode`` field equal to ``"10016"`` and ``cuisine`` field
+  equal to ``"Other"``, setting the ``cuisine`` field to ``"Category To
+  Be Determined"`` and the ``lastModified`` field to the current date.
 edition: python
 operation:
   - language: python
@@ -365,9 +365,9 @@ pre: |
   To update multiple documents, use the {{updateMethod}} method.
 
   The following operation updates *all* documents that have
-  ``address.zipcode`` field equal to ``"10016"``, setting the ``borough``
-  field to ``"Manhattan"`` and the ``lastModified`` field to the current
-  date.
+  ``address.zipcode`` field equal to ``"10016"`` and ``cuisine`` field
+  equal to ``"Other"``, setting the ``cuisine`` field to ``"Category To
+  Be Determined"`` and the ``lastModified`` field to the current date.
 replacement:
   updateMethod: "update_many_"
 ---
@@ -402,9 +402,9 @@ pre: |
   To update multiple documents, use the {{updateMethod}} method.
 
   The following operation updates *all* documents that have
-  ``address.zipcode`` field equal to ``"10016"``, setting the ``borough``
-  field to ``"Manhattan"`` and the ``lastModified`` field to the current
-  date.
+  ``address.zipcode`` field equal to ``"10016"`` and ``cuisine`` field
+  equal to ``"Other"``, setting the ``cuisine`` field to ``"Category To
+  Be Determined"`` and the ``lastModified`` field to the current date.
 operation:
   - literalinclude: includes/example-java-update-multiple-documents.java
     language: java
@@ -468,9 +468,9 @@ pre: |
   To update multiple documents, use the {{updateMethod}} method.
 
   The following operation updates *all* documents that have
-  ``address.zipcode`` field equal to ``"10016"``, setting the ``borough``
-  field to ``"Manhattan"`` and the ``lastModified`` field to the current
-  date.
+  ``address.zipcode`` field equal to ``"10016"`` and ``cuisine`` field
+  equal to ``"Other"``, setting the ``cuisine`` field to ``"Category To
+  Be Determined"`` and the ``lastModified`` field to the current date.
 replacement:
   updateMethod: "|UpdateManyAsync|"
 ...
