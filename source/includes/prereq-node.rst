@@ -5,6 +5,6 @@ required modules as well as to initialize ``url`` to the
 .. code-block:: javascript
 
    var MongoClient = require('mongodb').MongoClient;
-   var assert = require('assert')
+   var assert = require('assert');
    var ObjectId = require('mongodb').ObjectID;
    var url = 'mongodb://localhost:27017/test';
