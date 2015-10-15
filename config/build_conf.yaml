@@ -31,6 +31,7 @@ system:
     - 'sphinx_local.yaml'
     - intersphinx:
         - 'intersphinx.yaml'
+    - htaccess: ['htaccess.yaml']
     - migrations:
         - 'primer-migrations-docs.yaml'
         - 'primer-migrations-cpp-examples.yaml'

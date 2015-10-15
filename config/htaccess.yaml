@@ -1,0 +1,7 @@
+from: '/'
+to: '/shell'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://docs.mongodb.org/getting-started'}
+...
