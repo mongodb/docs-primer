@@ -3,6 +3,6 @@ url: http://api.mongodb.org/python/current/
 path: pymongo.inv
 ---
 name: manual
-url: http://docs.mongodb.org/manual/
+url: https://docs.mongodb.org/manual/
 path: manual.inv
 ...
