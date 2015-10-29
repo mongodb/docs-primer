@@ -14,6 +14,8 @@ content: |
    - `MongoDB Administration 101 Presentation <http://www.mongodb.com/presentations/webinar-mongodb-administration-101?jmp=docs>`_
    - Attend an upcoming MongoDB `event <http://www.mongodb.com/events?jmp=docs>`_ or
      `webinar <http://www.mongodb.com/webinars?jmp=docs>`_
+   - For information on MongoDB licensing, see `MongoDB Licensing
+     <https://www.mongodb.org/licensing>`_.
 ---
 ref: index-additional-info
 edition: node
@@ -28,4 +30,6 @@ content: |
      `webinar <http://www.mongodb.com/webinars?jmp=docs>`_
    - `Building Your First Application With MongoDB: Creating a REST API Using the MEAN Stack (Part 1)
      <http://www.mongodb.com/blog/post/building-your-first-application-mongodb-creating-rest-api-using-mean-stack-part-1?jmp=docs>`_
+   - For information on MongoDB licensing, see `MongoDB Licensing
+     <https://www.mongodb.org/about/licensing>`_.
 ...
