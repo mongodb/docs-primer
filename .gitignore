@@ -28,6 +28,7 @@ source/includes/example-*.rst
 source/includes/driver-table.rst
 source/includes/fact-installation-bind-ip-default-in-config.rst
 source/includes/fact-installation-directories.rst
+source/includes/fact-deprecated-32bit.rst
 source/includes/note-package-change.rst
 source/includes/note-suse-ulimit.rst
 source/includes/warning-selinux-rhel7.rst

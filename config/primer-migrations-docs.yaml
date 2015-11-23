@@ -196,4 +196,7 @@ transform:
 ---
 source: build/docs/source/includes/extracts-fact-3.0-linux-package-repo.yaml
 target: includes/extracts-fact-3.0-linux-package-repo.yaml
+---
+source: build/docs/source/includes/fact-deprecated-32bit.rst
+target: includes/fact-deprecated-32bit.rst
 ...
