@@ -24,7 +24,7 @@ pre: |
 ref: _query-operators-overview
 pre: |
    MongoDB provides operators to specify query conditions, such as
-   :manual:`comparison operators </reference/operator/query-comparison>`.
+   :manual:`comparison operators </reference/operator/query-comparison/>`.
    Although there are some exceptions, such as the :query:`$or` and
    :query:`$and` conditional operators, query conditions using operators
    generally have the following form:
