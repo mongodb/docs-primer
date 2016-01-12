@@ -4,6 +4,12 @@ Node.js Driver
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 :ecosystem:`MongoDB Node.js Driver </drivers/node-js>` is the
 officially supported ``Node.js`` driver for MongoDB.
 

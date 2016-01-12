@@ -6,6 +6,12 @@ Introduction to MongoDB
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 MongoDB is an open-source *document database* that provides high
 performance, high availability, and automatic scaling. MongoDB obviates
 the need for an Object Relational Mapping (ORM) to facilitate

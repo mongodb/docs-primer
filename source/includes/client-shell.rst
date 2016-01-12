@@ -4,6 +4,12 @@ MongoDB Shell (mongo)
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 The :program:`mongo` shell is an interactive JavaScript interface to
 MongoDB and is a component of the MongoDB package. You can use the
 :program:`mongo` shell to query and update data as well as perform
