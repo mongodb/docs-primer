@@ -129,12 +129,6 @@ target: includes/steps-install-mongodb-on-windows.yaml
 source: build/docs/source/includes/toc-installation-linux.yaml
 target: includes/toc-installation-linux.yaml
 ---
-source: build/docs/source/includes/toc-installation-osx.yaml
-target: includes/toc-installation-osx.yaml
----
-source: build/docs/source/includes/toc-installation-windows.yaml
-target: includes/toc-installation-windows.yaml
----
 source: build/docs/source/includes/toc-spec-installation-linux-other.yaml
 target: includes/toc-spec-installation-linux-other.yaml
 ---
