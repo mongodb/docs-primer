@@ -15,6 +15,8 @@ target: tutorial/install-mongodb-on-red-hat.txt
 transform:
   - regex: ":doc:`default ports </reference/default-mongodb-port>`."
     replace: ":manual:`default ports </reference/default-mongodb-port>`."
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-red-hat.rst"
+    replace: ""
 truncate:
    end-before: Uninstall MongoDB
 ---
@@ -27,6 +29,8 @@ transform:
     replace: ":manual:`MongoDB Shell Methods </reference/methods>`"
   - regex: ":doc:`(.*) <(/reference/configuration-options)>`"
     replace: ":manual:`\\1 <\\2>`"
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-windows.rst"
+    replace: ""
 ---
 source: build/docs/source/includes/steps-create-manually-windows-service-for-mongodb.yaml
 target: includes/steps-create-manually-windows-service-for-mongodb.yaml
@@ -137,27 +141,45 @@ target: includes/toc-spec-installation-linux-packages.yaml
 ---
 source: build/docs/source/tutorial/install-mongodb-on-debian.txt
 target: tutorial/install-mongodb-on-debian.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-debian.rst"
+    replace: ""
 truncate:
    end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-linux.txt
 target: tutorial/install-mongodb-on-linux.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-tarball.rst"
+    replace: ""
 ---
 source: build/docs/source/tutorial/install-mongodb-on-os-x.txt
 target: tutorial/install-mongodb-on-os-x.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-osx.rst"
+    replace: ""
 ---
 source: build/docs/source/tutorial/install-mongodb-on-ubuntu.txt
 target: tutorial/install-mongodb-on-ubuntu.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-ubuntu.rst"
+    replace: ""
 truncate:
    end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-amazon.txt
 target: tutorial/install-mongodb-on-amazon.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-amazon.rst"
+    replace: ""
 truncate:
    end-before: Uninstall MongoDB
 ---
 source: build/docs/source/tutorial/install-mongodb-on-suse.txt
 target: tutorial/install-mongodb-on-suse.txt
+transform:
+  - regex: ".. include:: /includes/extracts/install-past-mongodb-org-suse.rst"
+    replace: ""
 truncate:
    end-before: Uninstall MongoDB
 ---
@@ -166,9 +188,6 @@ target: includes/driver-table.rst
 ---
 source: build/docs/source/includes/fact-installation-directories.rst
 target: includes/fact-installation-directories.rst
----
-source: build/docs/source/includes/note-package-change.rst
-target: includes/note-package-change.rst
 ---
 source: build/docs/source/includes/note-suse-ulimit.rst
 target: includes/note-suse-ulimit.rst
@@ -181,6 +200,14 @@ target: includes/fact-installation-64bit.rst
 ---
 source: build/docs/source/includes/warning-selinux-rhel7.rst
 target: includes/warning-selinux-rhel7.rst
+---
+source: build/docs/source/includes/fact-mongodb-org-package-init-scripts.rst
+target: includes/fact-mongodb-org-package-init-scripts.rst
+transform:
+  - regex: ":doc:`Configuration File </reference/configuration-options>`"
+    replace: ":manual:`Configuration File </reference/configuration-options>`"
+  - regex: ":doc:`sharding </core/sharding>`"
+    replace: ":manual:`sharding </core/sharding>`"
 ---
 source: build/docs/source/includes/steps-configure-windows-service-for-mongodb.yaml
 target: includes/steps-configure-windows-service-for-mongodb.yaml
