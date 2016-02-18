@@ -220,4 +220,7 @@ target: includes/extracts-fact-3.0-linux-package-repo.yaml
 ---
 source: build/docs/source/includes/fact-deprecated-32bit.rst
 target: includes/fact-deprecated-32bit.rst
+---
+source: build/docs/source/includes/fact-installation-rhel5.rst
+target: includes/fact-installation-rhel5.rst
 ...
