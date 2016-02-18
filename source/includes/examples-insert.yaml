@@ -146,7 +146,7 @@ operation:
          }, function(err, result) {
           assert.equal(err, null);
           console.log("Inserted a document into the restaurants collection.");
-          callback(result);
+          callback();
         });
       };
   - pre: |
@@ -165,8 +165,7 @@ operation:
     code:
        Inserted a document into the restaurants collection.
     post: |
-       During a successful insert, the ``callback`` function is called with
-       a ``result`` object. The ``result`` object includes an
+       With a successful insert, the ``result`` object includes an
        ``insertedId`` property that contains the ``_id`` of the inserted
        document.
 replacement:
