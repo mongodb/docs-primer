@@ -48,7 +48,7 @@ ref: node-query-all
 edition: node
 operation:
   - pre: |
-      Define a ``findDocuments`` function as follows:
+      Define a ``findRestaurants`` function as follows:
     language: javascript
     code: |
       var findRestaurants = function(db, callback) {
@@ -63,7 +63,7 @@ operation:
          });
       };
   - pre: |
-      Call the ``findDocuments`` function.
+      Call the ``findRestaurants`` function.
     language: javascript
     code: | 
       MongoClient.connect(url, function(err, db) {
