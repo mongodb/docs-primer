@@ -67,8 +67,8 @@ pre: |
   databases implicitly upon their first use.
 action:
   - pre: |
-      To assign the local variable ``db`` to the database named
-      ``primer``, you can use attribute access, as in the following:
+      To assign the database named ``primer`` to the local variable ``db``,
+      you can use attribute access, as in the following:
     language: python
     code: |
       db = client.primer
