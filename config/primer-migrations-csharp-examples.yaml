@@ -281,8 +281,8 @@ transform:
   regex: "^            "
   replace: ""
 truncate:
-   start-after: 81
-   end-before: 89
+   start-after: 82
+   end-before: 90
 ---
 source: build/csharp-examples/src/MongoDB.Driver.Examples/UpdatePrimer.cs
 target: includes/example-csharp-update-multiple-documents-results.rst
@@ -290,8 +290,8 @@ transform:
   - regex: "^            "
     replace: ""
 truncate:
-   start-after: 91
-   end-before: 97
+   start-after: 92
+   end-before: 98
 ---
 source: build/csharp-examples/src/MongoDB.Driver.Examples/IndexesPrimer.cs
 target: includes/example-prereq-csharp-IndexesPrimer.cs
