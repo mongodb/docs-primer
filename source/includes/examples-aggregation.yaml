@@ -152,6 +152,7 @@ operation:
   - pre: "Define an aggregateRestaurants function."
     language: javascript
     code: |
+
       var aggregateRestaurants = function(db, callback) {
          db.collection('restaurants').aggregate(
            [
@@ -161,8 +162,7 @@ operation:
              assert.equal(err, null);
              console.log(result);
              callback(result);
-           }
-         );
+           });
       };
   - pre: |
       Call the ``aggregateRestaurants`` function.
