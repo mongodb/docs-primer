@@ -191,7 +191,6 @@ replacement:
   removeMethod: "deleteMany_"
 ---
 edition: node
-title: Remove 
 pre: |
   Use the deleteOne_ method to delete at most one matching document.
 ref: remove-justOne
