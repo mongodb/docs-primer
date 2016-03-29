@@ -47,7 +47,7 @@ operation:
       import pymongo
       cursor = db.restaurants.find().sort([
           ("borough", pymongo.ASCENDING),
-          ("address.zipcode", pymongo.DESCENDING)
+          ("address.zipcode", pymongo.ASCENDING)
       ])
   - pre: |
       Iterate the cursor and print the matching documents.
