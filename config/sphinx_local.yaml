@@ -8,7 +8,7 @@ theme:
   project: 'primer'
   google_analytics: 'UA-7301842-8'
   book_path_base: 'MongoDB-primer'
-  repo: 'docs'
+  repo: 'docs-primer'
   jira: 'DOCS'
   sitename: 'Getting Started with MongoDB'
   nav_excluded: []
