@@ -191,11 +191,11 @@ replacement:
   removeMethod: "deleteMany_"
 ---
 edition: node
-source:
-  file: examples-remove-base.yaml
-  ref: _remove-justOne
+title: Remove 
+pre: |
+  Use the deleteOne_ method to delete at most one matching document.
 ref: remove-justOne
-title: "Remove just one document."
+title: "Remove at Most a Single Document"
 operation:
   - pre: |
       Define a ``removeRestaurants`` function as follows:
@@ -223,8 +223,6 @@ operation:
       });
 post: |
    The operation prints to the console the number of documents removed.
-replacement:
-  removeMethod: "deleteOne_"
 ---
 edition: node
 source:
