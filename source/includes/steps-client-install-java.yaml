@@ -3,8 +3,7 @@ edition: java
 ref: download-java
 content: |
   Follow the instructions to install the 
-  `MongoDB Java Driver <http://mongodb.github.io/mongo-java-driver/3.0/driver/getting-started/installation-guide/#mongodb-driver>`_
-  as well as the `BSON library <http://mongodb.github.io/mongo-java-driver/3.0/bson/installation-guide/>`_.
+  `MongoDB Java Driver and the BSON library <http://mongodb.github.io/mongo-java-driver/>`_.
 ---
 title: "Connect to MongoDB."
 edition: java
