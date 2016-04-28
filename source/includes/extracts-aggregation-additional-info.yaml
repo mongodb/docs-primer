@@ -45,8 +45,8 @@ replacement:
   driver: Java Driver documentation
   aggregate: "aggregate_, AggregateIterable_, Block_"
 post: |
-  .. _Block: http://api.mongodb.org/java/3.0/com/mongodb/Block.html
-  .. _AggregateIterable: http://api.mongodb.org/java/3.0/com/mongodb/client/AggregateIterable.html
+  .. _Block: http://api.mongodb.com/java/3.0/com/mongodb/Block.html
+  .. _AggregateIterable: http://api.mongodb.com/java/3.0/com/mongodb/client/AggregateIterable.html
 ---
 edition: csharp
 ref: aggregation-additional-info

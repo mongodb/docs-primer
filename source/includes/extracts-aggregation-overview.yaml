@@ -66,7 +66,7 @@ inherit:
   ref: _aggregation-overview
   file: extracts-aggregation-overview-base.yaml
 post: |
-  .. _aggregate: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#aggregate-java.util.List-
+  .. _aggregate: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoCollection.html#aggregate-java.util.List-
 replacement:
   aggregate: "aggregate_"
 ---

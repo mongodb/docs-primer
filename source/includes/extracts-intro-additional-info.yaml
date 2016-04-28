@@ -45,7 +45,7 @@ inherit:
   ref: _intro-additional-info
   file: extracts-intro-additional-info-base.yaml
 post: |
-  .. _org.bson.Document: http://api.mongodb.org/java/3.0/org/bson/Document.html
+  .. _org.bson.Document: http://api.mongodb.com/java/3.0/org/bson/Document.html
 replacement:
   driver: Java Driver documentation
   document: org.bson.Document_

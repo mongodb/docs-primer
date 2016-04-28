@@ -23,4 +23,4 @@ Additional Information
 ----------------------
 
 For more information on installation, see
-`<http://api.mongodb.org/python/current/installation.html>`_
+`<http://api.mongodb.com/python/current/installation.html>`_

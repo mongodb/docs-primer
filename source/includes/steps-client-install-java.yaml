@@ -33,6 +33,6 @@ action:
     code: |
       MongoDatabase db = mongoClient.getDatabase("test");
 post: |
-  .. _com.mongodb.MongoClient: http://api.mongodb.org/java/3.0/com/mongodb/MongoClient.html
-  .. _com.mongodb.client.MongoDatabase: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoDatabase.html
+  .. _com.mongodb.MongoClient: http://api.mongodb.com/java/3.0/com/mongodb/MongoClient.html
+  .. _com.mongodb.client.MongoDatabase: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoDatabase.html
 ...

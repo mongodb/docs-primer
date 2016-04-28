@@ -53,10 +53,10 @@ replacement:
   cursor: FindIterable_
   document: "org.bson.Document_"
 post : |
-  .. _find: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#find--
-  .. _FindIterable: http://api.mongodb.org/java/3.0/com/mongodb/client/FindIterable.html
-  .. _org.bson.Document: http://api.mongodb.org/java/3.0/org/bson/Document.html
-  .. _append: http://api.mongodb.org/java/3.0/org/bson/Document.html#append-java.lang.String-java.lang.Object-
+  .. _find: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoCollection.html#find--
+  .. _FindIterable: http://api.mongodb.com/java/3.0/com/mongodb/client/FindIterable.html
+  .. _org.bson.Document: http://api.mongodb.com/java/3.0/org/bson/Document.html
+  .. _append: http://api.mongodb.com/java/3.0/org/bson/Document.html#append-java.lang.String-java.lang.Object-
 ---
 edition: csharp
 ref: query-overview

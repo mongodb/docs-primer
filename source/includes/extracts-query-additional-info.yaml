@@ -53,8 +53,8 @@ replacement:
   cursor: "FindIterable_, Block_"
   sort: "sort_"
 post: |
-  .. _Block: http://api.mongodb.org/java/3.0/com/mongodb/Block.html
-  .. _sort: http://api.mongodb.org/java/3.0/com/mongodb/async/client/FindIterable.html#sort-org.bson.conversions.Bson-
+  .. _Block: http://api.mongodb.com/java/3.0/com/mongodb/Block.html
+  .. _sort: http://api.mongodb.com/java/3.0/com/mongodb/async/client/FindIterable.html#sort-org.bson.conversions.Bson-
 ---
 edition: csharp
 ref: query-additional-info

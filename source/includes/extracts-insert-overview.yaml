@@ -44,9 +44,9 @@ inherit:
   ref: _insert-overview
   file: extracts-insert-overview-base.yaml
 post : |
-  .. _insertOne: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#insertOne-TDocument-
-  .. _insertMany: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#insertMany-java.util.List-
-  .. _org.bson.Document: http://api.mongodb.org/java/3.0/org/bson/Document.html
+  .. _insertOne: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoCollection.html#insertOne-TDocument-
+  .. _insertMany: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoCollection.html#insertMany-java.util.List-
+  .. _org.bson.Document: http://api.mongodb.com/java/3.0/org/bson/Document.html
 ---
 edition: csharp
 ref: insert-overview

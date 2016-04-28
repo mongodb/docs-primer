@@ -69,7 +69,7 @@ inherit:
   ref: _indexes-overview
   file: extracts-indexes-overview-base.yaml
 pre: |
-  .. _createIndex: http://api.mongodb.org/java/3.0/com/mongodb/client/MongoCollection.html#createIndex-org.bson.conversions.Bson-
+  .. _createIndex: http://api.mongodb.com/java/3.0/com/mongodb/client/MongoCollection.html#createIndex-org.bson.conversions.Bson-
 post: |
    To create an index on a field or fields, pass to the {{index}}
    method an index key specification document (org.bson.Document_) that
@@ -84,7 +84,7 @@ post: |
 
    {{index}} only creates an index if the index does not exist.
 
-   .. _org.bson.Document: http://api.mongodb.org/java/3.0/org/bson/Document.html
+   .. _org.bson.Document: http://api.mongodb.com/java/3.0/org/bson/Document.html
 replacement:
   index: "createIndex_"
 ---
