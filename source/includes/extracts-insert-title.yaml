@@ -25,8 +25,6 @@ content: |
    Insert Data with C++ Driver
    ===========================
 
-   .. include:: /includes/extracts/cpp-driver-in-dev-only.rst
-
 edition: cpp
 ---
 ref: insert-title

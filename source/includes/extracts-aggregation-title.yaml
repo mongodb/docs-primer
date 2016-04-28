@@ -26,8 +26,6 @@ content: |
    Data Aggregation with C++ Driver
    ================================
 
-   .. include:: /includes/extracts/cpp-driver-in-dev-only.rst
-
 ---
 edition: java
 ref: aggregation-title
