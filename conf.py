@@ -66,16 +66,16 @@ rst_epilog = '\n'.join([
 pygments_style = 'sphinx'
 
 extlinks = {
-    'hardlink' : ( 'http://docs.mongodb.org/{0}/%s'.format(conf.git.branches.current), ''),
+    'hardlink' : ( 'http://docs.mongodb.com/{0}/%s'.format(conf.git.branches.current), ''),
     'issue': ('https://jira.mongodb.org/browse/%s', '' ),
-    'api': ('http://api.mongodb.org/%s', ''),
-    'manual': ('http://docs.mongodb.org/manual%s', ''),
-    'ecosystem': ('http://docs.mongodb.org/ecosystem%s', ''),
-    'about': ('http://www.mongodb.org/about%s', ''),
+    'api': ('http://api.mongodb.com/%s', ''),
+    'manual': ('http://docs.mongodb.com/manual%s', ''),
+    'ecosystem': ('http://docs.mongodb.com/ecosystem%s', ''),
+
 
 ### We could use the already defined :api: but if we need to specify a particular driver,
 ### we could just change here
-    'csharp-api': ('http://api.mongodb.org/csharp/current/html%s.htm', ''),
+    'csharp-api': ('http://api.mongodb.com/csharp/current/html%s.htm', ''),
 }
 
 ## add `extlinks` for each published version.

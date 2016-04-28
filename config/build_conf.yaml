@@ -5,7 +5,7 @@ git:
 project:
   name: 'primer'
   tag: 'primer'
-  url: 'http://docs.mongodb.org/getting-started'
+  url: 'http://docs.mongodb.com/getting-started'
   title: 'Getting Started With MongoDB'
   branched: false
   editions:

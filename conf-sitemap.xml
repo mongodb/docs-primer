@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
-  base_url="http://docs.mongodb.org/getting-started/"
+  base_url="http://docs.mongodb.com/getting-started/"
   store_into="build/public/sitemap.xml.gz"
   verbose="1"
   >
 
 <directory 
 	path="build/public/shell" 
-	url="http://docs.mongodb.org/getting-started/shell"
+	url="http://docs.mongodb.com/getting-started/shell"
 	default_file="index.html"
 	/>
 <directory 
 	path="build/public/cpp" 
-	url="http://docs.mongodb.org/getting-started/cpp"
+	url="http://docs.mongodb.com/getting-started/cpp"
 	default_file="index.html"
 	/>
 <directory 
 	path="build/public/csharp" 
-	url="http://docs.mongodb.org/getting-started/csharp"
+	url="http://docs.mongodb.com/getting-started/csharp"
 	default_file="index.html"
 	/>
 <directory 
 	path="build/public/java" 
-	url="http://docs.mongodb.org/getting-started/java"
+	url="http://docs.mongodb.com/getting-started/java"
 	default_file="index.html"
 	/>
 <directory 
 	path="build/public/node" 
-	url="http://docs.mongodb.org/getting-started/node"
+	url="http://docs.mongodb.com/getting-started/node"
 	default_file="index.html"
 	/>
 <directory 
 	path="build/public/python" 
-	url="http://docs.mongodb.org/getting-started/python"
+	url="http://docs.mongodb.com/getting-started/python"
 	default_file="index.html"
 	/>
 <filter  action="drop"  type="wildcard"  pattern="*~" />
