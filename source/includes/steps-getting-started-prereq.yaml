@@ -32,7 +32,7 @@ post: |
   To import data into a :program:`mongod` instance running on a
   different host or port, specify the hostname or port by including the
   ``--host`` and the ``--port`` options in your :program:`mongoimport`
-  command. 
+  command.
 edition:
    - shell
    - python
