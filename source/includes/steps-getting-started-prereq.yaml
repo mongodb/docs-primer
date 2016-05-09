@@ -23,15 +23,16 @@ pre: |
 action:
   language: javascript
   code: |
-    mongoimport --db test --collection restaurants --drop --file primer-dataset.json
+    mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-dataset.json
 post: |
   The :program:`mongoimport` connects to a :program:`mongod` instance
-  running on localhost on port number ``27017``.
+  running on localhost on port number ``27017``. The ``--file`` option
+  provides the path to the data to import, in this case, ``~/downloads/primer-dataset.json``.
 
   To import data into a :program:`mongod` instance running on a
   different host or port, specify the hostname or port by including the
   ``--host`` and the ``--port`` options in your :program:`mongoimport`
-  command.
+  command. 
 edition:
    - shell
    - python
