@@ -53,7 +53,7 @@ assets:
   - branch: master
     path: build/java-examples
     repository: https://github.com/mongodb/mongo-java-driver.git
-  - branch: master
+  - branch: v2.2.x
     path: build/csharp-examples
     repository: https://github.com/mongodb/mongo-csharp-driver.git
 paths:
