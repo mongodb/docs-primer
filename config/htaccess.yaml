@@ -4,4 +4,11 @@ type: redirect
 code: 301
 outputs:
    - {'getting-started': 'https://docs.mongodb.com/getting-started'}
+---
+from: '/node'
+to: '/quick-start'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'http://mongodb.github.io/node-mongodb-native/2.2'}
 ...
