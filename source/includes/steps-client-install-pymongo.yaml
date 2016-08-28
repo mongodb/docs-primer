@@ -45,15 +45,14 @@ action:
       MongoDB instance that runs on the ``localhost`` interface on port
       ``27017``.
   - pre: |
-      You can specify a complete :manual:`MongoDB URI </reference/connection-string>` to
-      define the connection:
+      You can also specify a complete :manual:`MongoDB URI
+      </reference/connection-string>` to define the connection,
+      including explicitly specifying the host and port number. For
+      example, the following creates a connection to a MongoDB instance
+      that runs on ``mongodb0.example.net`` and the port of ``27017``:
     language: python
     code: |
-      client = MongoClient("mongodb://mongodb0.example.net:27019")
-    post: |
-      This :py:class:`~pymongo.mongo_client.MongoClient` represents
-      the connection to the MongoDB instance that runs on port
-      ``27019`` on the ``mongodb.example.net`` system.
+      client = MongoClient("mongodb://mongodb0.example.net:27017")
 ---
 title: Access Database Objects
 stepnum: 4
