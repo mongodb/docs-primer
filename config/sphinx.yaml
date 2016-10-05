@@ -5,8 +5,6 @@ editions:
   - 'shell'
   - 'python'
   - 'java'
-  - 'cpp'
-  - 'node'
   - 'csharp'
 ### --- ####
 java-web-base:

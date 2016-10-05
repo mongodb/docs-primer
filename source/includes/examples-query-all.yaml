@@ -6,7 +6,6 @@ edition:
   - shell
   - python
   - node
-  - cpp
   - java
   - csharp
 ref: restaurant-data

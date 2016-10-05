@@ -4,7 +4,7 @@ edition:
    - shell
    - python
    - node
-   - cpp
+   
    - java
    - csharp
 content: |
@@ -37,7 +37,7 @@ edition:
    - shell
    - python
    - node
-   - cpp
+   
    - java
    - csharp
 ...

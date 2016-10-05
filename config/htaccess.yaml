@@ -11,4 +11,74 @@ type: redirect
 code: 301
 outputs:
    - {'getting-started': 'http://mongodb.github.io/node-mongodb-native/2.2'}
+---
+from: '/cpp'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/introduction'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/import-data'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/client'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/insert'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/query'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/update'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/remove'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/aggregation'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+---
+from: '/cpp/indexes'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
 ...

@@ -120,8 +120,6 @@ html_theme_options = {
     'version': version,
     'version_selector': [{'text':'Shell','path':'getting-started/shell'},
                          {'text':'Python','path':'getting-started/python'},
-                         {'text':'Node.js','path':'getting-started/node'},
-                         {'text':'C++','path':'getting-started/cpp'},
                          {'text':'Java','path':'getting-started/java'},
                          {'text':'C#','path':'getting-started/csharp'}],
 #    'version_selector': get_versions(conf),

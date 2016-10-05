@@ -2,7 +2,7 @@ ref: index-additional-info
 edition:
   - shell
   - python
-  - cpp
+  
   - java
   - csharp
 content: |
