@@ -33,7 +33,7 @@ system:
         - 'primer-migrations-java-examples.yaml'
         - 'primer-migrations-csharp-examples.yaml'
 assets:
-  - branch: v3.2
+  - branch: master
     path: build/docs
     repository: https://github.com/mongodb/docs.git
   - branch: master
