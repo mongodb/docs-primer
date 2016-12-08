@@ -1,0 +1,72 @@
+---
+from: '/java'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/introduction'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/import-data'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/client'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/installation/'}
+---
+from: '/java/insert'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/query'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/update'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/remove'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/aggregation'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+---
+from: '/java/indexes'
+to: '/'
+type: redirect
+code: 301
+outputs:
+   - {'getting-started': 'https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/'}
+...
+

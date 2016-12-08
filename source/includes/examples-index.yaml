@@ -10,8 +10,6 @@ ref: restaurant-index-example-coll
 edition:
   - shell
   - python
-  - node
-  - java
   - csharp
 ---
 source:

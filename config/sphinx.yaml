@@ -4,26 +4,8 @@
 editions:
   - 'shell'
   - 'python'
-  - 'java'
   - 'csharp'
 ### --- ####
-java-web-base:
-  edition: java
-  inherit: java-base
-  tags:
-    - java
-    - hosted
-    - web
-    - website
-
-node-web-base:
-  edition: node
-  inherit: node-base
-  tags:
-    - node
-    - hosted
-    - web
-    - website
 
 python-web-base:
   edition: python
@@ -38,14 +20,6 @@ shell-web-base:
   inherit: shell-base
   tags:
     - shell
-    - web
-    - website
-
-cpp-web-base:
-  edition: cpp
-  inherit: cpp-base
-  tags:
-    - cpp
     - web
     - website
 
@@ -65,19 +39,6 @@ html-python:
   builder: html
   inherit: python-web-base
 
-dirhtml-java:
-  builder: dirhtml
-  inherit: java-web-base
-html-java:
-  builder: html
-  inherit: java-web-base
-
-dirhtml-node:
-  builder: dirhtml
-  inherit: node-web-base
-html-node:
-  builder: html
-  inherit: node-web-base
 
 dirhtml-shell:
   builder: dirhtml
@@ -85,13 +46,6 @@ dirhtml-shell:
 html-shell:
   builder: html
   inherit: shell-web-base
-
-dirhtml-cpp:
-  builder: dirhtml
-  inherit: cpp-web-base
-html-cpp:
-  builder: html
-  inherit: cpp-web-base
 
 dirhtml-csharp:
   builder: dirhtml
@@ -118,26 +72,14 @@ drivers-base:
     - /tutorial/install-mongodb-on-suse.txt
     - /tutorial/install-mongodb-on-windows.txt
     - /tutorial/install-on-linux.txt
-java-base:
-  inherit: drivers-base
-  edition: java
-  excluded: []
 python-base:
   inherit: drivers-base
   edition: python
-  excluded: []
-node-base:
-  inherit: drivers-base
-  edition: node
   excluded: []
 shell-base:
   inherit: root-base
   edition: shell
   tags: 'core'
-  excluded: []
-cpp-base:
-  inherit: drivers-base
-  edition: cpp
   excluded: []
 csharp-base:
   inherit: drivers-base

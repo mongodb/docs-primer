@@ -16,11 +16,6 @@
 	default_file="index.html"
 	/>
 <directory 
-	path="build/public/java" 
-	url="http://docs.mongodb.com/getting-started/java"
-	default_file="index.html"
-	/>
-<directory 
 	path="build/public/python" 
 	url="http://docs.mongodb.com/getting-started/python"
 	default_file="index.html"

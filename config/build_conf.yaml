@@ -13,8 +13,6 @@ project:
       branched: false
     - name: python
       branched: false
-    - name: java
-      branched: false
     - name: csharp
       branched: false
 version:
@@ -27,10 +25,9 @@ system:
     - 'sphinx_local.yaml'
     - intersphinx:
         - 'intersphinx.yaml'
-    - htaccess: ['htaccess.yaml']
+    - htaccess: ['htaccess.yaml', 'htaccess-java.yaml']
     - migrations:
         - 'primer-migrations-docs.yaml'
-        - 'primer-migrations-java-examples.yaml'
         - 'primer-migrations-csharp-examples.yaml'
 assets:
   - branch: master
@@ -42,9 +39,6 @@ assets:
   - branch: primer-dataset
     path: build/dataset
     repository: https://github.com/mongodb/docs-assets.git
-  - branch: master
-    path: build/java-examples
-    repository: https://github.com/mongodb/mongo-java-driver.git
   - branch: v2.2.x
     path: build/csharp-examples
     repository: https://github.com/mongodb/mongo-csharp-driver.git
