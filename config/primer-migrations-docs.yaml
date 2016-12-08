@@ -103,9 +103,6 @@ target: includes/steps-install-mongodb-on-linux.yaml
 source: build/docs/source/includes/steps-install-mongodb-on-debian.yaml
 target: includes/steps-install-mongodb-on-debian.yaml
 ---
-source: build/docs/source/includes/steps-install-mongodb-on-linux-32.yaml
-target: includes/steps-install-mongodb-on-linux-32.yaml
----
 source: build/docs/source/includes/steps-install-mongodb-on-linux-64.yaml
 target: includes/steps-install-mongodb-on-linux-64.yaml
 ---
@@ -201,14 +198,6 @@ target: includes/fact-installation-64bit.rst
 source: build/docs/source/includes/warning-selinux-rhel7.rst
 target: includes/warning-selinux-rhel7.rst
 ---
-source: build/docs/source/includes/fact-mongodb-org-package-init-scripts.rst
-target: includes/fact-mongodb-org-package-init-scripts.rst
-transform:
-  - regex: ":doc:`Configuration File </reference/configuration-options>`"
-    replace: ":manual:`Configuration File </reference/configuration-options>`"
-  - regex: ":doc:`sharding </core/sharding>`"
-    replace: ":manual:`sharding </core/sharding>`"
----
 source: build/docs/source/includes/steps-configure-windows-service-for-mongodb.yaml
 target: includes/steps-configure-windows-service-for-mongodb.yaml
 transform:
@@ -218,9 +207,9 @@ transform:
 source: build/docs/source/includes/extracts-fact-3.0-linux-package-repo.yaml
 target: includes/extracts-fact-3.0-linux-package-repo.yaml
 ---
-source: build/docs/source/includes/fact-deprecated-32bit.rst
-target: includes/fact-deprecated-32bit.rst
----
 source: build/docs/source/includes/fact-installation-rhel5.rst
 target: includes/fact-installation-rhel5.rst
+---
+source: build/docs/source/includes/admonition-power-ubuntu-restriction.rst
+target: includes/admonition-power-ubuntu-restriction.rst
 ...
