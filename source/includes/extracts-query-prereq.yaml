@@ -46,4 +46,7 @@ content: |
      :language: csharp
 
   .. include:: includes/fact-csharp-fluent-assertions.rst
+
+  .. note:: The ``FluentAssertions`` test code below uses the LINQ extension method Count().
+
 ...
