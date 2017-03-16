@@ -45,40 +45,40 @@ to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ---
 from: '/cpp/query'
 to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ---
 from: '/cpp/update'
 to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ---
 from: '/cpp/remove'
 to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ---
 from: '/cpp/aggregation'
 to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ---
 from: '/cpp/indexes'
 to: '/'
 type: redirect
 code: 301
 outputs:
-   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/'}
+   - {'getting-started': 'https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial'}
 ...
