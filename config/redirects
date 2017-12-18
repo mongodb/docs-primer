@@ -1,0 +1,37 @@
+raw: getting-started -> https://docs.mongodb.com/getting-started/shell
+
+raw: getting-started/cpp -> https://mongodb.github.io/mongo-cxx-driver 
+raw: getting-started/cpp/aggregation -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/client -> https://mongodb.github.io/mongo-cxx-driver 
+raw: getting-started/cpp/import-data -> https://mongodb.github.io/mongo-cxx-driver 
+raw: getting-started/cpp/indexes -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/insert -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/introduction -> https://mongodb.github.io/mongo-cxx-driver 
+raw: getting-started/cpp/query -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/remove -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/update -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+
+
+raw: getting-started/java -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/aggregation -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/client -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/installation 
+raw: getting-started/java/import-data -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/indexes -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/insert -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/introduction -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/query -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/remove -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+raw: getting-started/java/update -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
+
+
+raw: getting-started/node -> https://docs.mongodb.com/manual/tutorial/getting-started/
+raw: getting-started/node/aggregation -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/ 
+raw: getting-started/node/client -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/import-data -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/indexes -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/insert -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/introduction -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/query -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/ 
+raw: getting-started/node/remove -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+raw: getting-started/node/update -> http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/
+

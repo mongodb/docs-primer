@@ -38,12 +38,6 @@ transform:
   regex: ":doc:`(.*) <(/reference/configuration-options)>`"
   replace: ":manual:`\\1 <\\2>`"
 ---
-source: build/docs/source/includes/steps-get-mongodb-for-windows.yaml
-target: includes/steps-get-mongodb-for-windows.yaml
-transform:
-  regex: ":doc:"
-  replace: ":manual:"
----
 source: build/docs/source/includes/steps-install-mongodb-on-windows-unattended.yaml
 target: includes/steps-install-mongodb-on-windows-unattended.yaml
 transform:
@@ -123,9 +117,6 @@ target: includes/steps-install-mongodb-on-amazon.yaml
 ---
 source: build/docs/source/includes/steps-install-mongodb-on-suse.yaml
 target: includes/steps-install-mongodb-on-suse.yaml
----
-source: build/docs/source/includes/steps-install-mongodb-on-windows.yaml
-target: includes/steps-install-mongodb-on-windows.yaml
 ---
 source: build/docs/source/includes/toc-installation-linux.yaml
 target: includes/toc-installation-linux.yaml
@@ -209,6 +200,42 @@ target: includes/extracts-fact-3.0-linux-package-repo.yaml
 ---
 source: build/docs/source/includes/fact-installation-rhel5.rst
 target: includes/fact-installation-rhel5.rst
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-linux.yaml
+target: includes/steps-uninstall-mongodb-on-linux.yaml
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-redhat.yaml
+target: includes/steps-uninstall-mongodb-on-redhat.yaml
+---
+source: build/docs/source/includes/fact-installation-ulimit.rst
+target: includes/fact-installation-ulimit.rst
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-debian.yaml
+target: includes/steps-uninstall-mongodb-on-debian.yaml
+---
+source: build/docs/source/includes/fact-default-bind-ip-change.rst
+target: includes/fact-default-bind-ip-change.rst
+---
+source: build/docs/source/includes/fact-install-windows.rst
+target: includes/fact-install-windows.rst
+---
+source: build/docs/source/includes/fact-uninstall.rst
+target: includes/fact-uninstall.rst
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-suse.yaml
+target: includes/steps-uninstall-mongodb-on-suse.yaml
+---
+source: build/docs/source/includes/3.6-osx-platform.rst
+target: includes/3.6-osx-platform.rst
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-redhat.yaml
+target: includes/steps-uninstall-mongodb-on-redhat.yaml
+---
+source: build/docs/source/includes/fact-installation-ulimit.rst
+target: includes/fact-installation-ulimit.rst
+---
+source: build/docs/source/includes/steps-uninstall-mongodb-on-debian.yaml
+target: includes/steps-uninstall-mongodb-on-debian.yaml
 ---
 source: build/docs/source/includes/admonition-power-ubuntu-restriction.rst
 target: includes/admonition-power-ubuntu-restriction.rst

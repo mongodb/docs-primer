@@ -16,8 +16,8 @@ project:
     - name: csharp
       branched: false
 version:
-  release: '3.0.4'
-  branch: '3.0'
+  release: '3.6.0'
+  branch: '3.6'
 system:
   files:
     - 'integration.yaml'
