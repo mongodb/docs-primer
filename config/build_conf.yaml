@@ -8,13 +8,7 @@ project:
   url: 'http://docs.mongodb.com/getting-started'
   title: 'Getting Started With MongoDB'
   branched: false
-  editions:
-    - name: shell
-      branched: false
-    - name: python
-      branched: false
-    - name: csharp
-      branched: false
+
 version:
   release: '3.6.0'
   branch: '3.6'
@@ -25,23 +19,11 @@ system:
     - 'sphinx_local.yaml'
     - intersphinx:
         - 'intersphinx.yaml'
-    - htaccess: ['htaccess.yaml', 'htaccess-java.yaml']
-    - migrations:
-        - 'primer-migrations-docs.yaml'
-        - 'primer-migrations-csharp-examples.yaml'
+
 assets:
-  - branch: master
-    path: build/docs
-    repository: https://github.com/mongodb/docs.git
   - branch: master
     path: build/docs-tools
     repository: https://github.com/mongodb/docs-tools.git
-  - branch: primer-dataset
-    path: build/dataset
-    repository: https://github.com/mongodb/docs-assets.git
-  - branch: v2.2.x
-    path: build/csharp-examples
-    repository: https://github.com/mongodb/mongo-csharp-driver.git
 paths:
   output: 'build'
   source: 'source'

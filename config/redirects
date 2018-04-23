@@ -1,4 +1,28 @@
-raw: getting-started -> https://docs.mongodb.com/getting-started/shell
+raw: getting-started -> https://docs.mongodb.com/manual/tutorial/getting-started
+
+raw: getting-started/shell -> https://docs.mongodb.com/manual/tutorial/getting-started/
+raw: getting-started/shell/aggregation -> https://docs.mongodb.com/manual/core/aggregation-pipeline
+raw: getting-started/shell/client -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/shell/drivers -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/shell/import-data -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/shell/indexes -> https://docs.mongodb.com/manual/indexes
+raw: getting-started/shell/insert -> https://docs.mongodb.com/manual/tutorial/insert-documents
+raw: getting-started/shell/installation -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/shell/introduction -> https://docs.mongodb.com/manual/introduction
+raw: getting-started/shell/query -> https://docs.mongodb.com/manual/tutorial/query-documents 
+raw: getting-started/shell/remove -> https://docs.mongodb.com/manual/tutorial/remove-documents
+raw: getting-started/shell/update -> https://docs.mongodb.com/manual/tutorial/update-documents
+
+raw: getting-started/python -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/python/aggregation -> https://docs.mongodb.com/manual/core/aggregation-pipeline 
+raw: getting-started/python/client -> https://api.mongodb.com/python/current/installation.html 
+raw: getting-started/python/import-data -> https://docs.mongodb.com/manual/tutorial/getting-started
+raw: getting-started/python/indexes -> https://docs.mongodb.com/manual/indexes
+raw: getting-started/python/insert -> https://docs.mongodb.com/manual/tutorial/insert-documents 
+raw: getting-started/python/introduction -> https://docs.mongodb.com/manual/introduction 
+raw: getting-started/python/query -> https://docs.mongodb.com/manual/tutorial/query-documents 
+raw: getting-started/python/remove -> https://docs.mongodb.com/manual/tutorial/remove-documents 
+raw: getting-started/python/update -> https://docs.mongodb.com/manual/tutorial/update-documents 
 
 raw: getting-started/cpp -> https://mongodb.github.io/mongo-cxx-driver 
 raw: getting-started/cpp/aggregation -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 

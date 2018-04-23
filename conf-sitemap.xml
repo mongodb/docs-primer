@@ -6,19 +6,8 @@
   >
 
 <directory 
-	path="build/public/shell" 
-	url="http://docs.mongodb.com/getting-started/shell"
-	default_file="index.html"
-	/>
-<directory 
-	path="build/public/csharp" 
-	url="http://docs.mongodb.com/getting-started/csharp"
-	default_file="index.html"
-	/>
-<directory 
-	path="build/public/python" 
-	url="http://docs.mongodb.com/getting-started/python"
-	default_file="index.html"
+	path="build/public" 
+	url="http://docs.mongodb.com/getting-started"
 	/>
 <filter  action="drop"  type="wildcard"  pattern="*~" />
 <filter  action="drop"  type="wildcard"  pattern="*.txt" />
