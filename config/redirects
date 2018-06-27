@@ -7,7 +7,20 @@ raw: getting-started/shell/drivers -> https://docs.mongodb.com/manual/tutorial/g
 raw: getting-started/shell/import-data -> https://docs.mongodb.com/manual/tutorial/getting-started
 raw: getting-started/shell/indexes -> https://docs.mongodb.com/manual/indexes
 raw: getting-started/shell/insert -> https://docs.mongodb.com/manual/tutorial/insert-documents
-raw: getting-started/shell/installation -> https://docs.mongodb.com/manual/tutorial/getting-started
+
+raw: getting-started/shell/installation -> https://docs.mongodb.com/manual/tutorial/installation
+raw: getting-started/shell/tutorial/install-on-linux -> https://docs.mongodb.com/manual/administration/install-on-linux
+raw: getting-started/shell/tutorial/install-mongodb-on-red-hat -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat
+raw: getting-started/shell/tutorial/install-mongodb-on-suse -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-suse
+raw: getting-started/shell/tutorial/install-mongodb-on-amazon -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon
+raw: getting-started/shell/tutorial/install-mongodb-on-ubuntu -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu
+raw: getting-started/shell/tutorial/install-mongodb-on-debian -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian
+raw: getting-started/shell/tutorial/install-mongodb-on-linux -> https://docs.mongodb.com/manual/administration/install-on-linux
+
+raw: getting-started/shell/tutorial/install-mongodb-on-os-x -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x
+raw: getting-started/shell/tutorial/install-mongodb-on-windows -> https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows
+
+
 raw: getting-started/shell/introduction -> https://docs.mongodb.com/manual/introduction
 raw: getting-started/shell/query -> https://docs.mongodb.com/manual/tutorial/query-documents 
 raw: getting-started/shell/remove -> https://docs.mongodb.com/manual/tutorial/remove-documents
