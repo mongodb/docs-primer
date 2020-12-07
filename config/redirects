@@ -47,6 +47,7 @@ raw: getting-started/cpp/introduction -> https://mongodb.github.io/mongo-cxx-dri
 raw: getting-started/cpp/query -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
 raw: getting-started/cpp/remove -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
 raw: getting-started/cpp/update -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial 
+raw: getting-started/cpp/documents -> https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/tutorial
 
 
 raw: getting-started/java -> https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start 
